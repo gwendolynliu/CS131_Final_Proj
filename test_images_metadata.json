@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "filename": "1_beach_sunny.jpg",
+    "category": "Landscape",
+    "description": "Sunny beach",
+    "expected_moods": ["joyful", "open", "bright"],
+    "scene_type": "dominant_subject"
+  },
+  {
+    "id": 2,
+    "filename": "2_beach_empty.jpg",
+    "category": "Landscape",
+    "description": "Empty beach at dusk",
+    "expected_moods": ["lonely", "reflective", "melancholic"],
+    "scene_type": "dominant_subject"
+  },
+  {
+    "id": 3,
+    "filename": "3_forest_peaceful.jpg",
+    "category": "Landscape",
+    "description": "Forest in soft daylight",
+    "expected_moods": ["peaceful", "calm", "restorative"],
+    "scene_type": "dominant_subject"
+  },
+  {
+    "id": 4,
+    "filename": "4_forest_foggy.jpg",
+    "category": "Landscape",
+    "description": "Foggy forest",
+    "expected_moods": ["mysterious", "tense", "uncertain"],
+    "scene_type": "dominant_subject"
+  },
+  {
+    "id": 5,
+    "filename": "5_city_crowded.jpg",
+    "category": "Urban",
+    "description": "Crowded city street",
+    "expected_moods": ["energetic", "chaotic", "alive"],
+    "scene_type": "multi_object"
+  },
+  {
+    "id": 6,
+    "filename": "6_city_empty.jpg",
+    "category": "Urban",
+    "description": "Empty city street at night",
+    "expected_moods": ["isolated", "quiet", "uneasy"],
+    "scene_type": "multi_object"
+  },
+  {
+    "id": 7,
+    "filename": "7_room_cozy.jpg",
+    "category": "Interior Space",
+    "description": "Cozy room corner",
+    "expected_moods": ["intimate", "safe", "nostalgic"],
+    "scene_type": "multi_object"
+  },
+  {
+    "id": 8,
+    "filename": "8_room_confined.jpg",
+    "category": "Interior Space",
+    "description": "Dim, messy, confined room",
+    "expected_moods": ["anxious", "lonely", "stagnant"],
+    "scene_type": "multi_object"
+  },
+  {
+    "id": 9,
+    "filename": "9_person_friends.jpg",
+    "category": "Human",
+    "description": "Person with friends",
+    "expected_moods": ["social", "warm", "connected"],
+    "scene_type": "dominant_subject"
+  },
+  {
+    "id": 10,
+    "filename": "10_person_alone.jpg",
+    "category": "Human",
+    "description": "Person alone",
+    "expected_moods": ["solitary", "introspective", "distant"],
+    "scene_type": "dominant_subject"
+  },
+  {
+    "id": 11,
+    "filename": "11_flower_fresh.jpg",
+    "category": "Object",
+    "description": "Fresh flowers",
+    "expected_moods": ["hopeful", "tender", "romantic"],
+    "scene_type": "dominant_subject"
+  },
+  {
+    "id": 12,
+    "filename": "12_flower_wilted.jpeg",
+    "category": "Object",
+    "description": "Wilted flowers",
+    "expected_moods": ["fragile", "mournful", "passing-time feeling"],
+    "scene_type": "dominant_subject"
+  },
+  {
+    "id": 13,
+    "filename": "13_abandoned_boats.jpg",
+    "category": "Scene",
+    "description": "Abandoned boat skeletons",
+    "expected_moods": ["desolate", "industrial", "apocalyptic"],
+    "scene_type": "multi_object"
+  },
+  {
+    "id": 14,
+    "filename": "14_rusted_pipes.jpg",
+    "category": "Object",
+    "description": "Rusted bathroom pipes",
+    "expected_moods": ["grimy", "neglected", "uneasy"],
+    "scene_type": "multi_object"
+  },
+  {
+    "id": 15,
+    "filename": "15_mannequin.jpg",
+    "category": "Object",
+    "description": "Sticker-covered mannequin",
+    "expected_moods": ["surreal", "uncanny", "futuristic"],
+    "scene_type": "dominant_subject"
+  },
+  {
+    "id": 16,
+    "filename": "16_clustered_kitchen.jpg",
+    "category": "Scene",
+    "description": "Cluttered kitchen sink",
+    "expected_moods": ["messy", "mundane", "slightly tense"],
+    "scene_type": "multi_object"
+  },
+  {
+    "id": 17,
+    "filename": "17_abandoned_classroom.jpg",
+    "category": "Scene",
+    "description": "Abandoned classroom",
+    "expected_moods": ["decayed", "forgotten", "melancholic"],
+    "scene_type": "multi_object"
+  },
+  {
+    "id": 18,
+    "filename": "18_starry_night.jpg",
+    "category": "Landscape",
+    "description": "Starry night",
+    "expected_moods": ["vast", "sublime", "quiet"],
+    "scene_type": "dominant_subject"
+  },
+  {
+    "id": 19,
+    "filename": "19_alley_companions.jpg",
+    "category": "Scene",
+    "description": "Alley companions",
+    "expected_moods": ["intimate", "secretive", "urban", "cinematic"],
+    "scene_type": "multi_object"
+  },
+  {
+    "id": 20,
+    "filename": "20_hidden_waterfall.jpg",
+    "category": "Landscape",
+    "description": "Hidden forest waterfall",
+    "expected_moods": ["serene", "secluded", "majestic", "contemplative"],
+    "scene_type": "dominant_subject"
+  },
+  {
+    "id": 21,
+    "filename": "21_toys.jpg",
+    "category": "Object",
+    "description": "Cluttered toy",
+    "expected_moods": ["playful", "nostalgic", "surreal"],
+    "scene_type": "multi_object"
+  },
+  {
+    "id": 22,
+    "filename": "22_artificial_forest.jpg",
+    "category": "Scene",
+    "description": "Artificial forest construction",
+    "expected_moods": ["surreal", "disorienting", "ironic"],
+    "scene_type": "multi_object"
+  },
+  {
+    "id": 23,
+    "filename": "23_fisherman.jpg",
+    "category": "Scene",
+    "description": "Fisherman by city harbor",
+    "expected_moods": ["watchful", "industrial", "contemplative", "solitary"],
+    "scene_type": "multi_object"
+  },
+  {
+    "id": 24,
+    "filename": "24_running_crowd.jpg",
+    "category": "Scene",
+    "description": "Running crowd",
+    "expected_moods": ["chaotic", "urgent", "overwhelming"],
+    "scene_type": "multi_object"
+  },
+  {
+    "id": 25,
+    "filename": "25_crouching_child.jpg",
+    "category": "Scene",
+    "description": "Crouching child",
+    "expected_moods": ["tense", "vulnerable", "political"],
+    "scene_type": "multi_object"
+  }
+]
