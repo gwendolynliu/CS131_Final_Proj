@@ -3,3 +3,5 @@ cache/
 *.npy
 __pycache__/
 milestone_figures/
+test_images/
+data_poems/PoetryFoundationData.csv
