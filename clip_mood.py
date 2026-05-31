@@ -125,10 +125,18 @@ def build_sbert_cache():
         json.dump(poem_ids, f)
 
 
-def retrieve_poems_by_mood(image_path, top_k=5):
+def get_mood_query(image_path):
+    """Return the expanded SBERT query string for an image without doing retrieval."""
+    from sbert_retrieval_v4_expanded import expand_query
     mood_scores = get_image_mood_vector(image_path)
     query = build_mood_query(mood_scores)
-    results, expanded_query = sbert_retrieve(query, top_k)
+    return expand_query(query)
+
+
+def retrieve_poems_by_mood(image_path, top_k=5, diversity=True):
+    mood_scores = get_image_mood_vector(image_path)
+    query = build_mood_query(mood_scores)
+    results, expanded_query = sbert_retrieve(query, top_k, diversity=diversity)
     return results, expanded_query, mood_scores
 
 

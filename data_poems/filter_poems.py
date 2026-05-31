@@ -3,6 +3,10 @@ import re
 import statistics
 from collections import Counter
 
+# terminal punctuation and closing characters for truncation detection
+TERMINAL = ".?!—…"
+CLOSING = "\"')" + "“”‘’"  # ASCII + Unicode curly quotes
+
 # ---- file paths ----
 CSV_IN = "data_poems/PoetryFoundationData.csv"
 CSV_OUT = "data_poems/filtered_poems.csv"
@@ -36,6 +40,26 @@ def parse_tags(tag_string: str) -> list[str]:
             merged.append(part)
     return merged
 
+
+
+def is_truncated(text: str) -> bool:
+    """
+    Returns True if the poem was likely cut off mid-flow.
+    Signal: poem uses terminal punctuation throughout its body but does not
+    end on terminal punctuation — inconsistent with its own style.
+    Also catches poems that end on a comma (always a mid-clause stop).
+    """
+    lines = [line for line in text.split("\n") if line.strip()]
+    if len(lines) > 1:
+        body = "\n".join(lines[:-1])
+        body_has_punct = bool(re.search(r"[.?!]", body))
+        t = text.rstrip().rstrip(CLOSING)
+        ends_ok = len(t) > 0 and t[-1] in TERMINAL
+        if body_has_punct and not ends_ok:
+            return True
+    if text.rstrip().endswith(","):
+        return True
+    return False
 
 
 def is_layout_heavy(text: str) -> bool:
@@ -88,6 +112,7 @@ removed_counts: dict[str, int] = {
     "too_short": 0,
     "duplicate": 0,
     "layout_heavy": 0,
+    "truncated": 0,
 }
 
 kept: list[dict] = []
@@ -120,6 +145,11 @@ for r in rows:
     # filter 4: layout-dependent / concrete poetry
     if is_layout_heavy(text):
         removed_counts["layout_heavy"] += 1
+        continue
+
+    # filter 5: likely truncated (punctuated style but no terminal ending)
+    if is_truncated(text):
+        removed_counts["truncated"] += 1
         continue
 
     kept.append({

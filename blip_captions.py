@@ -134,6 +134,7 @@ def retrieve_poems_by_caption(image_path, top_k=5):
         pid = poem_ids[idx]
         row = poem_df.loc[pid]
         results.append({
+            "poem_id": pid,
             "title": row["title"],
             "author": row["author"],
             "text": str(row["text"]),

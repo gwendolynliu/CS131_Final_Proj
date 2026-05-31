@@ -81,13 +81,24 @@ def build_mood_query(mood_scores):
     return query
 
 
-def retrieve_poems_by_handcrafted(image_path, top_k=5):
+def get_mood_query(image_path):
+    """Return the expanded SBERT query string for an image without doing retrieval."""
+    from sbert_retrieval_v4_expanded import expand_query
     warm = extract_color_temperature(image_path)
     brightness, contrast = extract_brightness_contrast(image_path)
     edge_density = extract_edge_density(image_path)
     mood_scores = map_features_to_mood(warm, brightness, contrast, edge_density)
     query = build_mood_query(mood_scores)
-    results, expanded_query = sbert_retrieve(query, top_k)
+    return expand_query(query)
+
+
+def retrieve_poems_by_handcrafted(image_path, top_k=5, diversity=True):
+    warm = extract_color_temperature(image_path)
+    brightness, contrast = extract_brightness_contrast(image_path)
+    edge_density = extract_edge_density(image_path)
+    mood_scores = map_features_to_mood(warm, brightness, contrast, edge_density)
+    query = build_mood_query(mood_scores)
+    results, expanded_query = sbert_retrieve(query, top_k, diversity=diversity)
     return results, warm, brightness, contrast, edge_density, mood_scores, expanded_query
 
 

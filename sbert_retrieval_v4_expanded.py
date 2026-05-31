@@ -64,7 +64,7 @@ def expand_query(query):
     return query
 
 
-def retrieve_poems(query, top_k=5):
+def retrieve_poems(query, top_k=5, diversity=True):
     expanded_query = expand_query(query)
 
     all_chunk_embs = np.load(SBERT_CHUNKS_FILE)
@@ -83,31 +83,35 @@ def retrieve_poems(query, top_k=5):
         chunk_embs = all_chunk_embs[start:end]
         sims = chunk_embs @ query_emb
         poem_scores.append(float(np.max(sims)))
-        poem_mean_embs.append(np.mean(chunk_embs, axis=0))
+        if diversity:
+            poem_mean_embs.append(np.mean(chunk_embs, axis=0))
 
     poem_scores = np.array(poem_scores) - baseline_v3
 
-    poem_mean_embs = np.array(poem_mean_embs)
-    norms = np.linalg.norm(poem_mean_embs, axis=1, keepdims=True)
-    poem_mean_embs = poem_mean_embs / np.where(norms == 0, 1, norms)
+    if diversity:
+        poem_mean_embs = np.array(poem_mean_embs)
+        norms = np.linalg.norm(poem_mean_embs, axis=1, keepdims=True)
+        poem_mean_embs = poem_mean_embs / np.where(norms == 0, 1, norms)
 
-    top_candidates = np.argsort(poem_scores)[::-1][:CANDIDATE_POOL]
-
-    selected_indices = []
-    selected_embs = []
-    for idx in top_candidates:
-        emb = poem_mean_embs[idx]
-        if all(float(emb @ sel) < DIVERSITY_THRESHOLD for sel in selected_embs):
-            selected_indices.append(idx)
-            selected_embs.append(emb)
-        if len(selected_indices) == top_k:
-            break
+        top_candidates = np.argsort(poem_scores)[::-1][:CANDIDATE_POOL]
+        selected_indices = []
+        selected_embs = []
+        for idx in top_candidates:
+            emb = poem_mean_embs[idx]
+            if all(float(emb @ sel) < DIVERSITY_THRESHOLD for sel in selected_embs):
+                selected_indices.append(idx)
+                selected_embs.append(emb)
+            if len(selected_indices) == top_k:
+                break
+    else:
+        selected_indices = list(np.argsort(poem_scores)[::-1][:top_k])
 
     results = []
     for idx in selected_indices:
         pid = poem_ids[idx]
         row = poem_df.loc[pid]
         results.append({
+            "poem_id": pid,
             "title": row["title"],
             "author": row["author"],
             "text": str(row["text"]),
@@ -115,6 +119,34 @@ def retrieve_poems(query, top_k=5):
         })
 
     return results, expanded_query
+
+
+def score_poems(query, poem_ids):
+    """Score a specific list of poem_ids against a query. Returns {poem_id: score}."""
+    expanded_query = expand_query(query)
+
+    all_chunk_embs = np.load(SBERT_CHUNKS_FILE)
+    with open(SBERT_CHUNK_MAP_FILE) as f:
+        chunk_map = json.load(f)
+    with open(SBERT_IDS_FILE) as f:
+        all_poem_ids = json.load(f)
+
+    query_emb = sbert.encode([expanded_query], convert_to_numpy=True, show_progress_bar=False)[0]
+    query_emb = query_emb / np.linalg.norm(query_emb)
+
+    id_to_idx = {pid: i for i, pid in enumerate(all_poem_ids)}
+
+    scores = {}
+    for pid in poem_ids:
+        if pid not in id_to_idx:
+            continue
+        idx = id_to_idx[pid]
+        start, end = chunk_map[idx]
+        chunk_embs = all_chunk_embs[start:end]
+        sims = chunk_embs @ query_emb
+        scores[pid] = float(np.max(sims)) - float(baseline_v3[idx])
+
+    return scores
 
 
 if __name__ == "__main__":
