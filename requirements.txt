@@ -1,0 +1,20 @@
+# Core ML frameworks
+torch==2.2.2
+torchvision==0.17.2
+
+# OpenAI CLIP (must install from GitHub — not on PyPI)
+git+https://github.com/openai/CLIP.git
+
+# HuggingFace (BLIP captions + SBERT)
+transformers==4.57.6
+sentence-transformers==3.3.1
+
+# Image processing
+Pillow==12.2.0
+
+# Data
+numpy==1.26.4
+pandas==3.0.3
+
+# YOLO (only used in experimental scripts, safe to skip for core pipeline)
+# ultralytics==8.4.53
