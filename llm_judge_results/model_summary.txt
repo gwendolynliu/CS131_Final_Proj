@@ -1,0 +1,6 @@
+             model_name  n_pairs  semantic_fit_mean  emotional_fit_mean  overall_resonance_mean  semantic_fit_std  emotional_fit_std  overall_resonance_std
+        rerank_retrieve       19              3.316               3.632                   3.316             1.057              1.165                  1.057
+  track_1_clip_semantic       19              2.684               2.895                   2.526             1.157              1.100                  1.020
+   track_2_blip_caption       19              2.526               2.789                   2.368             1.073              1.084                  1.116
+track_3_clip_sbert_mood       19              1.474               2.632                   1.684             0.513              0.895                  0.820
+ track_4_handcrafted_cv       19              1.368               2.000                   1.474             0.496              1.000                  0.697

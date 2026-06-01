@@ -6,7 +6,7 @@ import torch
 import clip
 from PIL import Image
 from sentence_transformers import SentenceTransformer
-from sbert_retrieval_v4_expanded import retrieve_poems as sbert_retrieve
+# from sbert_retrieval_v4_expanded import retrieve_poems as sbert_retrieve
 
 # ---- paths ----
 POEMS_CSV = "data_poems/filtered_poems.csv"
@@ -134,6 +134,8 @@ def get_mood_query(image_path):
 
 
 def retrieve_poems_by_mood(image_path, top_k=5, diversity=True):
+    from sbert_retrieval_v4_expanded import retrieve_poems as sbert_retrieve
+    
     mood_scores = get_image_mood_vector(image_path)
     query = build_mood_query(mood_scores)
     results, expanded_query = sbert_retrieve(query, top_k, diversity=diversity)

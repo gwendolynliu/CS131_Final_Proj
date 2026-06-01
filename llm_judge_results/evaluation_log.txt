@@ -1,0 +1,618 @@
+LLM Judge Evaluation Log
+================================================================================
+
+Evaluating 25 images x 5 models = 125 image-poem pairs
+Output directory: /Users/connorhuangmarsh/Desktop/CS131_Final_Proj/llm_judge_results
+Detailed JSON: /Users/connorhuangmarsh/Desktop/CS131_Final_Proj/llm_judge_results/judgments_detailed.json
+Detailed CSV:  /Users/connorhuangmarsh/Desktop/CS131_Final_Proj/llm_judge_results/judgments_detailed.csv
+
+================================================================================
+Image 1: 1_beach_sunny.jpg
+Description: Sunny beach
+Expected moods: joyful, open, bright
+================================================================================
+Using original image for Anthropic: 1_beach_sunny.jpg | raw=1,858,605 bytes | base64=2,478,140 bytes
+[1/125] track_1_clip_semantic | poem="[Ocean which I pushed up]" by Joshua Beckman | sem=4 emo=4 overall=4
+Rationale: The poem directly addresses the beach scene with vivid imagery of ocean, sand, and sunlight that matches the image's visible content. The emotional tone captures both the warmth and brightness of the sunny beach while introducing a subtle melancholic undercurrent about transience, which resonates with the golden, ephemeral quality of the sunset lighting. The pairing feels poetically compelling, though the poem's darker philosophical turn slightly tempers the purely joyful mood suggested by the metadata.
+
+Using original image for Anthropic: 1_beach_sunny.jpg | raw=1,858,605 bytes | base64=2,478,140 bytes
+[2/125] track_2_blip_caption | poem="The Ocean" by Nathaniel Hawthorne | sem=3 emo=2 overall=2
+Rationale: The poem addresses the ocean and waves, which are visible in the image, providing basic semantic alignment. However, the poem's focus on deep caves, silence, and hidden depths contrasts sharply with the image's bright, sunlit, energetic beach scene. The melancholic, introspective tone of the poem poorly matches the joyful, open, and luminous mood conveyed by the golden hour lighting and dynamic waves.
+
+Using original image for Anthropic: 1_beach_sunny.jpg | raw=1,858,605 bytes | base64=2,478,140 bytes
+[3/125] track_3_clip_sbert_mood | poem="To a Deaf and Dumb Little Girl" by Hartley Coleridge | sem=2 emo=3 overall=2
+Rationale: The poem's central subject is a deaf and dumb girl and themes of isolation/solitude, which do not match the image's visible content of a sunny beach scene. However, the poem's emotional tone of solitude, contemplation, and peaceful acceptance aligns moderately with the retrieval model's mood query. The pairing feels conceptually mismatched despite some atmospheric overlap—the poem's darkness and human suffering contrast with the image's bright, joyful beach setting.
+
+Using original image for Anthropic: 1_beach_sunny.jpg | raw=1,858,605 bytes | base64=2,478,140 bytes
+[4/125] track_4_handcrafted_cv | poem="I dwell in Possibility – (466)" by Emily Dickinson | sem=2 emo=4 overall=3
+Rationale: The poem's imagery of sky, openness, and expansive space aligns with the beach scene's vast horizon and bright atmosphere, but the poem's central metaphor of a 'house' of possibility lacks direct connection to the visible beach, ocean, and sand. The emotional tone of hope, wonder, and sublime contemplation matches the image's bright, uplifting mood very well. While the pairing captures a shared sense of aspiration and openness, the semantic disconnect between domestic/architectural language and the natural seascape limits overall resonance.
+
+Using original image for Anthropic: 1_beach_sunny.jpg | raw=1,858,605 bytes | base64=2,478,140 bytes
+[5/125] rerank_retrieve | poem="“The great sea ...”" by Uvavnuk | sem=4 emo=5 overall=5
+Rationale: The poem directly addresses the sea, wind, and earth—all prominent visual elements in this beach scene. The imagery of water's movement and natural forces aligns perfectly with the visible waves and coastal setting. The emotional tone of joy and liberation matches the bright, open, uplifting atmosphere conveyed by the golden sunlight and expansive seascape. The pairing creates a compelling resonance between the poem's celebration of natural forces and the image's serene yet dynamic beach environment.
+
+================================================================================
+Image 2: 2_beach_empty.jpg
+Description: Empty beach at dusk
+Expected moods: lonely, reflective, melancholic
+================================================================================
+Compressed image for Anthropic: 2_beach_empty.jpg | original_raw=5,044,121 bytes | original_base64=6,725,496 bytes | sent_raw=3,115,860 bytes | sent_base64=4,154,480 bytes | quality=75 | long_edge=5000
+[6/125] track_1_clip_semantic | poem="History Lesson" by Natasha Trethewey | sem=2 emo=3 overall=2
+Rationale: While the poem depicts a beach scene with similar visual elements (sand, water, solitude), it focuses on a populated moment with a child and grandmother, contrasting sharply with the image's empty, desolate beach. The poem's primary subject is racial history and family memory rather than the barren, contemplative landscape shown. The emotional melancholy differs—the poem centers on resilience and historical reflection, while the image conveys isolation and quietude.
+
+Compressed image for Anthropic: 2_beach_empty.jpg | original_raw=5,044,121 bytes | original_base64=6,725,496 bytes | sent_raw=3,115,860 bytes | sent_base64=4,154,480 bytes | quality=75 | long_edge=5000
+[7/125] track_2_blip_caption | poem="The Ocean" by Nathaniel Hawthorne | sem=3 emo=4 overall=3
+Rationale: The poem addresses the ocean and its depths, which matches the beach/ocean setting visible in the image, though it doesn't directly reference the empty beach, dunes, or wooden structure. The poem's contemplative tone about silence, solitude, and hidden depths aligns well with the melancholic, lonely atmosphere of the empty dusk beach. However, the pairing feels somewhat generic—the poem could apply to many ocean scenes and doesn't capture the specific visual emptiness or architectural elements present in this particular image.
+
+Compressed image for Anthropic: 2_beach_empty.jpg | original_raw=5,044,121 bytes | original_base64=6,725,496 bytes | sent_raw=3,115,860 bytes | sent_base64=4,154,480 bytes | quality=75 | long_edge=5000
+[8/125] track_3_clip_sbert_mood | poem="Sanctuary" by Jean Valentine | sem=2 emo=4 overall=3
+Rationale: The poem focuses on interpersonal dialogue, solitude, and existential questions about death and connection, which doesn't directly match the image's visible content of an empty beach with a wooden structure. However, the poem's exploration of solitude, silence, listening, and the weight of absence aligns strongly with the melancholic, lonely atmosphere of the desolate beach scene. The pairing creates emotional resonance through shared themes of isolation and introspection, though the semantic disconnect between intimate human conversation and empty landscape limits overall coherence.
+
+Compressed image for Anthropic: 2_beach_empty.jpg | original_raw=5,044,121 bytes | original_base64=6,725,496 bytes | sent_raw=3,115,860 bytes | sent_base64=4,154,480 bytes | quality=75 | long_edge=5000
+[9/125] track_4_handcrafted_cv | poem="Upon Time and Eternity" by John Bunyan | sem=2 emo=2 overall=2
+Rationale: The poem is an abstract philosophical meditation on time and eternity using geometric metaphors (ring, measure), which has minimal connection to the image's concrete visual content of an empty beach, dunes, and wooden structure. While the image evokes vastness and timelessness, the poem's intellectual abstraction about temporal concepts doesn't engage with the beach's sensory or atmospheric qualities. The expected moods of loneliness and melancholy are absent from Bunyan's detached, metaphysical verse.
+
+Compressed image for Anthropic: 2_beach_empty.jpg | original_raw=5,044,121 bytes | original_base64=6,725,496 bytes | sent_raw=3,115,860 bytes | sent_base64=4,154,480 bytes | quality=75 | long_edge=5000
+[10/125] rerank_retrieve | poem="The Ocean" by Nathaniel Hawthorne | sem=3 emo=4 overall=3
+Rationale: The poem references the ocean and its depths, which aligns with the beach setting, though it focuses on underwater caves rather than the visible beach landscape. The emotional tone of quietness, solitude, and melancholy matches the image's lonely, reflective atmosphere well. However, the pairing feels somewhat indirect—the poem's meditation on hidden depths beneath surface turbulence doesn't directly engage with the image's primary visual content of an empty, calm beach at dusk.
+
+================================================================================
+Image 3: 3_forest_peaceful.jpg
+Description: Forest in soft daylight
+Expected moods: peaceful, calm, restorative
+================================================================================
+Using original image for Anthropic: 3_forest_peaceful.jpg | raw=3,172,613 bytes | base64=4,230,152 bytes
+[11/125] track_1_clip_semantic | poem="Hawk" by Wendy Videlock | sem=4 emo=3 overall=3
+Rationale: The poem directly addresses forest imagery with vivid color language ('green is green and blue is blue') that matches the image's lush, verdant aesthetic. However, the poem's focus on a wounded hawk and solitary discovery introduces narrative elements not visually present in the peaceful, unpopulated forest scene. While semantically aligned with the forest setting, the poem's darker undertones of injury and isolation don't fully capture the serene, restorative mood conveyed by the soft daylight and tranquil atmosphere.
+
+Using original image for Anthropic: 3_forest_peaceful.jpg | raw=3,172,613 bytes | base64=4,230,152 bytes
+[12/125] track_2_blip_caption | poem="Little or Nothing" by Ken Mikolowski | sem=4 emo=4 overall=4
+Rationale: The poem directly addresses the image's primary visual content—layered trees receding into misty distance—capturing the sense of depth and repetition visible in the forest. The minimalist language and focus on trees, sky, and the vastness beyond mirrors the image's atmospheric perspective and contemplative mood. The poem's spare, meditative tone aligns well with the peaceful, restorative qualities of the soft-lit forest scene.
+
+Using original image for Anthropic: 3_forest_peaceful.jpg | raw=3,172,613 bytes | base64=4,230,152 bytes
+[13/125] track_3_clip_sbert_mood | poem="Inventing a Horse" by Meghan O'Rourke | sem=2 emo=3 overall=2
+Rationale: The poem's primary subject is a horse and the act of inventing/caring for one, which has minimal direct connection to the forest landscape visible in the image. While the poem contains forest imagery (tree roots, timber wolves, fluent trees), these are peripheral details rather than central themes. The emotional tone of quiet contemplation and gentle care aligns somewhat with the image's peaceful atmosphere, but the semantic mismatch between the poem's focus on animal husbandry and the image's emphasis on natural forest scenery limits overall resonance.
+
+Using original image for Anthropic: 3_forest_peaceful.jpg | raw=3,172,613 bytes | base64=4,230,152 bytes
+[14/125] track_4_handcrafted_cv | poem="[the day shifts . . .]" by kari edwards | sem=2 emo=2 overall=2
+Rationale: The poem's abstract, fragmented language about fear, violence, and existential confusion does not match the image's concrete forest setting with visible trees, foliage, and natural elements. While the image contains some mist and atmospheric qualities, the poem's surreal, dystopian tone fundamentally conflicts with the peaceful, restorative mood evident in the soft daylight and verdant forest. The retrieval model appears to have misinterpreted the image's subtle atmospheric qualities as indicators of mystery and unease, when the dominant impression is calm and natural serenity.
+
+Using original image for Anthropic: 3_forest_peaceful.jpg | raw=3,172,613 bytes | base64=4,230,152 bytes
+[15/125] rerank_retrieve | poem="Hawk" by Wendy Videlock | sem=4 emo=3 overall=3
+Rationale: The poem directly addresses forest imagery with vivid color language ('green is green and blue is blue') that matches the image's lush, verdant aesthetic. However, the poem's focus on a wounded hawk and solitary discovery creates a more introspective, melancholic tone than the image's serene, restorative atmosphere. While semantically aligned, the emotional registers diverge—the image conveys peaceful calm while the poem suggests isolation and injury.
+
+================================================================================
+Image 4: 4_forest_foggy.jpg
+Description: Foggy forest
+Expected moods: mysterious, tense, uncertain
+================================================================================
+Using original image for Anthropic: 4_forest_foggy.jpg | raw=918,311 bytes | base64=1,224,416 bytes
+[16/125] track_1_clip_semantic | poem="Hawk" by Wendy Videlock | sem=3 emo=2 overall=2
+Rationale: The poem references a forest setting which matches the image's landscape, but focuses on a hawk and wildlife encounter rather than the foggy, atmospheric qualities visible in the image. The poem's tone is observational and somewhat whimsical, which contrasts with the image's mysterious, tense, and uncertain mood. While both involve forests, the pairing lacks cohesion between the poem's specific narrative and the image's dominant atmospheric qualities.
+
+Using original image for Anthropic: 4_forest_foggy.jpg | raw=918,311 bytes | base64=1,224,416 bytes
+[17/125] track_2_blip_caption | poem="Little or Nothing" by Ken Mikolowski | sem=4 emo=4 overall=4
+Rationale: The poem directly addresses the image's primary visual content—dense trees receding into foggy distance—with its iterative structure of 'trees...and beyond these trees, trees.' The minimalist language captures the foggy forest's sense of obscured depth and visual uncertainty. The mood of mystery and the contemplative tone align well with the image's atmospheric tension, creating a cohesive and poetically resonant pairing.
+
+Using original image for Anthropic: 4_forest_foggy.jpg | raw=918,311 bytes | base64=1,224,416 bytes
+[18/125] track_3_clip_sbert_mood | poem="Inventing a Horse" by Meghan O'Rourke | sem=1 emo=2 overall=1
+Rationale: The poem is about inventing and caring for a horse, with imagery of fences, harnesses, tree roots, and fields—none of which appear in or relate to the foggy forest image. While the poem contains some dark/mysterious elements (timber wolves, shadows), it is fundamentally about domestication, care, and love rather than the mysterious, tense, uncertain atmosphere of the misty woodland scene. The pairing lacks meaningful semantic or thematic connection.
+
+Using original image for Anthropic: 4_forest_foggy.jpg | raw=918,311 bytes | base64=1,224,416 bytes
+[19/125] track_4_handcrafted_cv | poem="The Illiterate" by William Meredith | sem=2 emo=3 overall=2
+Rationale: The poem's central metaphor of an illiterate man with an unread letter shares thematic territory with the image's sense of mystery and uncertainty, but lacks direct semantic connection to the foggy forest setting, isolation, or visual elements. The emotional tone of longing, fear, and ambiguity aligns moderately with the image's mysterious atmosphere, though the poem's focus on human relationships and literacy feels tangential to the desolate, abandoned landscape depicted. The pairing feels conceptually loose rather than compelling.
+
+Using original image for Anthropic: 4_forest_foggy.jpg | raw=918,311 bytes | base64=1,224,416 bytes
+[20/125] rerank_retrieve | poem="Hawk" by Wendy Videlock | sem=3 emo=2 overall=2
+Rationale: The poem references a forest setting which matches the image's landscape, but focuses on a hawk and wildlife encounter rather than the foggy, atmospheric qualities visible in the image. The poem's tone is observational and somewhat whimsical, which contrasts with the image's mysterious, tense, and uncertain mood created by the heavy fog and darkness. While both involve forests, the pairing lacks emotional and thematic cohesion.
+
+================================================================================
+Image 5: 5_city_crowded.jpg
+Description: Crowded city street
+Expected moods: energetic, chaotic, alive
+================================================================================
+Using original image for Anthropic: 5_city_crowded.jpg | raw=2,209,203 bytes | base64=2,945,604 bytes
+[21/125] track_1_clip_semantic | poem="The Songs of Maximus: SONG 2" by Charles Olson | sem=2 emo=3 overall=2
+Rationale: The poem's fragmented language and existential questioning about movement and bodies tangentially relates to the crowded urban scene, but lacks direct reference to visible elements like shops, signs, or pedestrian activity. The emotional tone of existential dread and morbidity (buried bodies, graves) partially matches the chaotic energy of the street, though the poem's darkness contrasts with the vibrant, commercial atmosphere. The pairing feels thematically disconnected despite both addressing urban spaces and human density.
+
+Using original image for Anthropic: 5_city_crowded.jpg | raw=2,209,203 bytes | base64=2,945,604 bytes
+[22/125] track_2_blip_caption | poem="[Un Citadin / A City Dweller]" by Jacques Réda | sem=4 emo=3 overall=4
+Rationale: The poem directly addresses walking through city streets and the experience of being among crowds, matching the image's core subject matter. However, the poem's introspective, philosophical tone about transcendence and existential dissolution contrasts with the image's energetic, chaotic, and materially vibrant shopping street atmosphere. The pairing creates interesting tension between the poem's meditative abstraction and the image's concrete sensory abundance, yielding compelling but somewhat misaligned emotional resonance.
+
+Using original image for Anthropic: 5_city_crowded.jpg | raw=2,209,203 bytes | base64=2,945,604 bytes
+[23/125] track_3_clip_sbert_mood | poem="My Mother's Music" by Emilie Buchwald | sem=1 emo=2 overall=1
+Rationale: The poem is entirely about intimate domestic scenes of childhood and piano music, with no connection to the image's crowded urban street setting, commercial signage, or masses of people. While the poem does evoke nostalgia and melancholy as mentioned in the mood query, it lacks any semantic grounding in the visual content. The pairing feels arbitrary rather than meaningfully resonant.
+
+Using original image for Anthropic: 5_city_crowded.jpg | raw=2,209,203 bytes | base64=2,945,604 bytes
+[24/125] track_4_handcrafted_cv | poem="Upon Time and Eternity" by John Bunyan | sem=1 emo=1 overall=1
+Rationale: The poem is a philosophical meditation on time and eternity using abstract metaphors of rings and measures, with no connection to the image's concrete urban setting, crowded street scene, or visible commercial environment. The poem's contemplative, abstract nature directly contradicts the energetic, chaotic, and visually dense atmosphere of the bustling city street. There is no semantic or thematic overlap between the metaphysical content and the image's documented subject matter.
+
+Using original image for Anthropic: 5_city_crowded.jpg | raw=2,209,203 bytes | base64=2,945,604 bytes
+[25/125] rerank_retrieve | poem="The Market-Place" by Walter de La Mare | sem=4 emo=4 overall=4
+Rationale: The poem's central metaphor of a 'clamorous market-place' with voices in 'tumult,' 'chaffering and laughing, pushing for a place' directly parallels the crowded urban street scene with its dense throngs of people. The poem captures the energetic chaos and sensory overload visible in the image—the bustling crowds, commercial signage, and visual cacophony. While the poem's introspective turn toward melancholy and hidden sadness adds a contemplative layer not explicitly visible in the photograph, this deepens rather than contradicts the pairing, creating meaningful resonance between external chaos and internal complexity.
+
+================================================================================
+Image 6: 6_city_empty.jpg
+Description: Empty city street at night
+Expected moods: isolated, quiet, uneasy
+================================================================================
+Using original image for Anthropic: 6_city_empty.jpg | raw=2,421,938 bytes | base64=3,229,252 bytes
+[26/125] track_1_clip_semantic | poem="The Great Figure" by William Carlos Williams | sem=2 emo=2 overall=2
+Rationale: While both the image and poem depict nighttime urban scenes, the poem focuses on a moving firetruck with active sensory details (siren, gong clangs, rumbling), whereas the image shows a completely empty, still street with no vehicles or movement. The poem's energy and urgency directly contradict the image's quiet, isolated atmosphere. The semantic mismatch between dynamic action and static emptiness prevents meaningful resonance.
+
+Using original image for Anthropic: 6_city_empty.jpg | raw=2,421,938 bytes | base64=3,229,252 bytes
+[27/125] track_2_blip_caption | poem="Fireflies" by Frank Ormsby | sem=2 emo=2 overall=2
+Rationale: The poem focuses on fireflies in a natural garden setting with porch lamps and trees, while the image depicts an urban street with streetlights, buildings, and tram tracks at night. Though both involve nighttime lights, the semantic content diverges significantly—one is nature-centered and intimate, the other is architectural and expansive. The poem's contemplative, whimsical tone about natural phenomena contrasts with the image's stark, isolated, and somewhat uneasy urban atmosphere.
+
+Using original image for Anthropic: 6_city_empty.jpg | raw=2,421,938 bytes | base64=3,229,252 bytes
+[28/125] track_3_clip_sbert_mood | poem="Sanctuary" by Jean Valentine | sem=2 emo=4 overall=3
+Rationale: The poem's semantic content focuses on interpersonal connection, dialogue, and existential questions about death and listening—elements largely absent from the empty urban street image. However, the poem's emotional landscape of isolation, uncertainty, silence, and existential dread aligns strongly with the image's mood. The pairing creates resonance through shared atmosphere rather than literal correspondence, though the disconnect between the poem's intimate human focus and the image's desolate emptiness limits overall coherence.
+
+Using original image for Anthropic: 6_city_empty.jpg | raw=2,421,938 bytes | base64=3,229,252 bytes
+[29/125] track_4_handcrafted_cv | poem="From “The Invention of Influence”" by Peter Cole | sem=1 emo=2 overall=1
+Rationale: The poem discusses Freud's concept of cryptomnesia and hidden memory channels—abstract philosophical content with no connection to the image's visible elements (empty street, tram tracks, nighttime urban setting, architecture). While the poem's themes of obscurity and hidden meanings could tangentially relate to the image's mysterious atmosphere, there is no semantic overlap with the concrete scene depicted. The pairing feels arbitrary rather than meaningfully resonant.
+
+Using original image for Anthropic: 6_city_empty.jpg | raw=2,421,938 bytes | base64=3,229,252 bytes
+[30/125] rerank_retrieve | poem="After Midnight" by Louis Simpson | sem=4 emo=5 overall=4
+Rationale: The poem directly addresses deserted dark streets at night with specific urban imagery (drugstore, garage, dark houses) that closely matches the image's empty city street setting. The emotional tone of isolation, unease, and existential dread perfectly captures the image's atmospheric mood. The pairing creates a compelling resonance between the visual emptiness and the poem's exploration of urban solitude and displacement.
+
+================================================================================
+Image 7: 7_room_cozy.jpg
+Description: Cozy room corner
+Expected moods: intimate, safe, nostalgic
+================================================================================
+Compressed image for Anthropic: 7_room_cozy.jpg | original_raw=4,202,529 bytes | original_base64=5,603,372 bytes | sent_raw=3,670,068 bytes | sent_base64=4,893,424 bytes | quality=75 | long_edge=6955
+[31/125] track_1_clip_semantic | poem="Thompson’s Lunch Room—Grand Central Station" by Amy Lowell | sem=1 emo=1 overall=1
+Rationale: The poem describes a busy, sterile lunch room at Grand Central Station with white surfaces, commercial kitchen activity, and crowds—a stark contrast to the intimate, cozy personal room corner shown in the image. The image features warm wicker furniture, personal artwork, books, plants, and soft lighting, while the poem focuses on clinical whites, institutional spaces, and impersonal commercial activity. There is virtually no overlap in setting, objects, or atmosphere between the two.
+
+Compressed image for Anthropic: 7_room_cozy.jpg | original_raw=4,202,529 bytes | original_base64=5,603,372 bytes | sent_raw=3,670,068 bytes | sent_base64=4,893,424 bytes | quality=75 | long_edge=6955
+[32/125] track_2_blip_caption | poem="I sat in the sun" by Jane Hirshfield | sem=2 emo=3 overall=2
+Rationale: The poem mentions a chair and sunlight, which appear in the image, but the poem's focus on direct sunlight and the act of sitting in sun doesn't match the image's warm artificial lighting and interior setting. The emotional tone of contemplative stillness and hunger/fasting creates some resonance with the intimate, nostalgic mood of the cozy room, but the specific imagery diverges significantly from the cluttered, eclectic interior space depicted.
+
+Compressed image for Anthropic: 7_room_cozy.jpg | original_raw=4,202,529 bytes | original_base64=5,603,372 bytes | sent_raw=3,670,068 bytes | sent_base64=4,893,424 bytes | quality=75 | long_edge=6955
+[33/125] track_3_clip_sbert_mood | poem="Inventing a Horse" by Meghan O'Rourke | sem=2 emo=3 overall=2
+Rationale: The poem's central subject—inventing/imagining a horse and the care required to sustain it—has minimal direct connection to the image's visible content of a cozy room with wicker furniture, books, plants, and personal artifacts. While both evoke introspection and domesticity, the poem's extended meditation on an absent animal and imaginative labor doesn't align with the room's tangible, lived-in comfort. The emotional resonance is moderate: both share nostalgic and intimate qualities, but the poem's focus on absence and the difficulty of sustaining imagination feels somewhat tangential to the room's atmosphere of settled belonging and shelter.
+
+Compressed image for Anthropic: 7_room_cozy.jpg | original_raw=4,202,529 bytes | original_base64=5,603,372 bytes | sent_raw=3,670,068 bytes | sent_base64=4,893,424 bytes | quality=75 | long_edge=6955
+[34/125] track_4_handcrafted_cv | poem="From “The Invention of Influence”" by Peter Cole | sem=1 emo=2 overall=1
+Rationale: The poem discusses Freud's concept of cryptomnesia and hidden memory channels—abstract philosophical content with no connection to the image's visible elements (wicker furniture, plants, books, warm lighting, cozy interior). While the poem's themes of memory and hidden knowledge might tangentially relate to nostalgia, the semantic mismatch is severe. The emotional tone is intellectual and contemplative rather than intimate or safe, contradicting the image's cozy, welcoming atmosphere.
+
+Compressed image for Anthropic: 7_room_cozy.jpg | original_raw=4,202,529 bytes | original_base64=5,603,372 bytes | sent_raw=3,670,068 bytes | sent_base64=4,893,424 bytes | quality=75 | long_edge=6955
+[35/125] rerank_retrieve | poem="Here" by Samuel Menashe | sem=4 emo=4 overall=4
+Rationale: The poem's reference to 'this old flat' directly matches the intimate interior space shown, with its vintage furnishings, accumulated objects, and lived-in atmosphere. The themes of haunting presence and aftermath align well with the nostalgic, memory-laden quality of the room's eclectic décor and personal collections. The emotional tone of quiet melancholy and introspection resonates strongly with the intimate, somewhat solitary mood conveyed by the warm lighting and solitary space.
+
+================================================================================
+Image 8: 8_room_confined.jpg
+Description: Dim, messy, confined room
+Expected moods: anxious, lonely, stagnant
+================================================================================
+Using original image for Anthropic: 8_room_confined.jpg | raw=85,924 bytes | base64=114,568 bytes
+[36/125] track_1_clip_semantic | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64: The image was specified using the image/jpeg media type, but the image appears to be a image/webp image"},"request_id":"req_011Cba5fimrPsHGo8aUMbCA7"}
+
+Using original image for Anthropic: 8_room_confined.jpg | raw=85,924 bytes | base64=114,568 bytes
+[37/125] track_2_blip_caption | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64: The image was specified using the image/jpeg media type, but the image appears to be a image/webp image"},"request_id":"req_011Cba5ggG5JYJwTnwDAJb5M"}
+
+Using original image for Anthropic: 8_room_confined.jpg | raw=85,924 bytes | base64=114,568 bytes
+[38/125] track_3_clip_sbert_mood | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64: The image was specified using the image/jpeg media type, but the image appears to be a image/webp image"},"request_id":"req_011Cba5hEFfq97Z1FSkKuH9m"}
+
+Using original image for Anthropic: 8_room_confined.jpg | raw=85,924 bytes | base64=114,568 bytes
+[39/125] track_4_handcrafted_cv | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64: The image was specified using the image/jpeg media type, but the image appears to be a image/webp image"},"request_id":"req_011Cba5hn18NtMgZqwoEW1BA"}
+
+Using original image for Anthropic: 8_room_confined.jpg | raw=85,924 bytes | base64=114,568 bytes
+[40/125] rerank_retrieve | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64: The image was specified using the image/jpeg media type, but the image appears to be a image/webp image"},"request_id":"req_011Cba5inqWjVAQwJerECkyB"}
+
+================================================================================
+Image 9: 9_person_friends.jpg
+Description: Person with friends
+Expected moods: social, warm, connected
+================================================================================
+Using original image for Anthropic: 9_person_friends.jpg | raw=2,206,752 bytes | base64=2,942,336 bytes
+[41/125] track_1_clip_semantic | poem="House of Fact, House of Ruin" by Tom Sleigh | sem=1 emo=1 overall=1
+Rationale: The poem is an abstract philosophical meditation on facts and reality with no connection to the image's visible content of friends gathering indoors with warm beverages. The poem contains no references to social interaction, warmth, connection, domestic comfort, or any of the concrete elements present in the photograph. There is a fundamental mismatch between the poem's intellectual abstraction and the image's celebration of human connection.
+
+Using original image for Anthropic: 9_person_friends.jpg | raw=2,206,752 bytes | base64=2,942,336 bytes
+[42/125] track_2_blip_caption | poem="Death" by Bill Knott | sem=1 emo=1 overall=1
+Rationale: The poem is about death, mortality, and introspection, while the image depicts a joyful, lively gathering of friends celebrating together with raised hands and genuine laughter. The semantic content is entirely misaligned—the poem's contemplation of death contrasts sharply with the image's vibrant social warmth. The emotional tones are fundamentally opposed, making this pairing deeply incongruent.
+
+Using original image for Anthropic: 9_person_friends.jpg | raw=2,206,752 bytes | base64=2,942,336 bytes
+[43/125] track_3_clip_sbert_mood | poem="Cat" by Marilyn Singer | sem=2 emo=3 overall=2
+Rationale: The poem is about a cat's preferences for warmth and comfort, while the image shows four people socializing indoors with hot beverages. There is minimal semantic overlap—the poem contains no human subjects, social interaction, or gathering themes. Emotionally, both convey coziness and warmth, creating moderate alignment in mood. However, the fundamental mismatch between a solitary cat's interior monologue and a joyful group gathering significantly undermines overall resonance.
+
+Using original image for Anthropic: 9_person_friends.jpg | raw=2,206,752 bytes | base64=2,942,336 bytes
+[44/125] track_4_handcrafted_cv | poem="Upon Time and Eternity" by John Bunyan | sem=1 emo=1 overall=1
+Rationale: The poem is a philosophical meditation on time and eternity with abstract metaphysical concepts, while the image depicts a concrete, joyful social gathering of friends sharing warm beverages and laughter. There is no meaningful connection between the poem's abstract temporal philosophy and the image's intimate, present-moment social scene. The retrieval appears to have failed significantly in matching content, mood, or thematic resonance.
+
+Using original image for Anthropic: 9_person_friends.jpg | raw=2,206,752 bytes | base64=2,942,336 bytes
+[45/125] rerank_retrieve | poem="skint valentine" by Tom Pickard | sem=2 emo=4 overall=3
+Rationale: The poem lacks specific semantic connection to the visible content (friends, mugs, cookies, windows, casual gathering) but strongly captures the emotional essence of the image—warmth, connection, and togetherness. The minimalist meditation on 'what we have' and 'who we are is love' resonates with the intimate, joyful mood of friends together, though the pairing feels more thematic than directly matched to the scene's concrete details.
+
+================================================================================
+Image 10: 10_person_alone.jpg
+Description: Person alone
+Expected moods: solitary, introspective, distant
+================================================================================
+Using original image for Anthropic: 10_person_alone.jpg | raw=879,287 bytes | base64=1,172,384 bytes
+[46/125] track_1_clip_semantic | poem="Blind Date" by Jay Leeming | sem=2 emo=4 overall=3
+Rationale: The poem describes a dinner date between two people, while the image shows a solitary figure alone in an empty restaurant—a significant semantic mismatch. However, the emotional tone aligns well: both convey profound loneliness, introspection, and isolation despite (or because of) being in a social space. The pairing creates an interesting tension between the poem's relational loneliness and the image's absolute solitude, though they depict fundamentally different scenarios.
+
+Using original image for Anthropic: 10_person_alone.jpg | raw=879,287 bytes | base64=1,172,384 bytes
+[47/125] track_2_blip_caption | poem="Satires of Circumstance in Fifteen Glimpses VIII: In the Study" by Thomas Hardy | sem=2 emo=3 overall=2
+Rationale: The poem depicts a social interaction between two people in an interior setting, while the image shows a solitary figure alone at a table. Though both involve indoor scenes and introspection, the poem's narrative of dialogue and human encounter contrasts sharply with the image's emphasis on isolation. The emotional tones partially align—both convey melancholy and quiet dignity—but the semantic mismatch (solitude vs. interaction) undermines overall resonance.
+
+Using original image for Anthropic: 10_person_alone.jpg | raw=879,287 bytes | base64=1,172,384 bytes
+[48/125] track_3_clip_sbert_mood | poem="The Illiterate" by William Meredith | sem=2 emo=4 overall=3
+Rationale: The poem's literal content (an illiterate man with an unread letter) doesn't directly match the image's visible elements (solitary person in a restaurant/bar setting). However, the poem's emotional landscape of isolation, uncertainty, longing, and mysterious absence aligns strongly with the image's melancholic, introspective mood. The pairing works on an emotional and thematic level despite limited semantic overlap.
+
+Using original image for Anthropic: 10_person_alone.jpg | raw=879,287 bytes | base64=1,172,384 bytes
+[49/125] track_4_handcrafted_cv | poem="From “The Invention of Influence”" by Peter Cole | sem=2 emo=3 overall=2
+Rationale: The poem discusses Freud's concept of cryptomnesia and hidden memory channels, which has minimal connection to the image's visible content of a solitary person in a restaurant booth. While the poem's themes of uncertainty and hidden depths align somewhat with the introspective mood, the semantic mismatch is significant—the poem is philosophical and abstract rather than grounded in the concrete scene. The emotional resonance is moderate, as both convey a sense of isolation and internal complexity, but the pairing feels intellectually disconnected from the image's visual narrative.
+
+Using original image for Anthropic: 10_person_alone.jpg | raw=879,287 bytes | base64=1,172,384 bytes
+[50/125] rerank_retrieve | poem="Blind Date" by Jay Leeming | sem=2 emo=4 overall=3
+Rationale: The poem describes a dinner date between two people, while the image shows a solitary figure alone in an empty restaurant—a significant semantic mismatch. However, the emotional tones align well: both convey loneliness, introspection, and isolation despite (or because of) the social setting. The pairing creates an interesting tension between the poem's interpersonal narrative and the image's visual solitude, but the disconnect between content and image limits overall resonance.
+
+================================================================================
+Image 11: 11_flower_fresh.jpg
+Description: Fresh flowers
+Expected moods: hopeful, tender, romantic
+================================================================================
+Using original image for Anthropic: 11_flower_fresh.jpg | raw=3,033,218 bytes | base64=4,044,292 bytes
+[51/125] track_1_clip_semantic | poem="Bonsai at the Potter's Stall" by Kay Mullen | sem=4 emo=3 overall=3
+Rationale: The poem shares strong semantic overlap with the image: both feature fresh flowers/plants in a vase/pot positioned near a window with natural light, miniature oranges, and delicate botanical subjects. However, the poem's tone is more melancholic and introspective (about stunted growth and arrested development) rather than matching the image's hopeful, tender, and romantic mood suggested by the bright sunlit composition and vibrant fresh flowers.
+
+Using original image for Anthropic: 11_flower_fresh.jpg | raw=3,033,218 bytes | base64=4,044,292 bytes
+[52/125] track_2_blip_caption | poem="Confession of a Bird Watcher" by Chard DeNiord | sem=2 emo=1 overall=1
+Rationale: While the poem mentions windows, birds, and flowers, it focuses on bird deaths and tragic collision with glass—a dark, morbid theme entirely absent from the bright, hopeful image of fresh flowers in sunlight. The poem's mood of guilt, death, and existential conflict directly contradicts the image's tender, romantic, and hopeful atmosphere. The pairing creates jarring tonal dissonance rather than meaningful resonance.
+
+Using original image for Anthropic: 11_flower_fresh.jpg | raw=3,033,218 bytes | base64=4,044,292 bytes
+[53/125] track_3_clip_sbert_mood | poem="Inventing a Horse" by Meghan O'Rourke | sem=1 emo=2 overall=1
+Rationale: The poem is about inventing and caring for a horse, which has no semantic connection to the image's fresh flowers in a vase by a window. While the poem contains some contemplative and peaceful elements that loosely align with expected moods, the subject matter is entirely disconnected from the visual content. The pairing feels arbitrary and lacks meaningful resonance between image and text.
+
+Using original image for Anthropic: 11_flower_fresh.jpg | raw=3,033,218 bytes | base64=4,044,292 bytes
+[54/125] track_4_handcrafted_cv | poem="Feedback" by Marcus Slease | sem=1 emo=1 overall=1
+Rationale: The poem is a meta-commentary on narrative structures, watching, and abstract philosophical concepts with no connection to the image's concrete content of fresh flowers in a vase by a window. The poem's surreal, mysterious tone contradicts the image's hopeful, tender, romantic mood. There is no meaningful alignment between the domestic floral still life and this abstract literary critique.
+
+Using original image for Anthropic: 11_flower_fresh.jpg | raw=3,033,218 bytes | base64=4,044,292 bytes
+[55/125] rerank_retrieve | poem="Bonsai at the Potter's Stall" by Kay Mullen | sem=4 emo=2 overall=3
+Rationale: The poem shares key visual elements with the image: fresh flowers in a vase, natural light from windows, and botanical subjects in an interior setting. However, the poem's focus on bonsai miniatures and a potter's workspace doesn't directly match the image's simple floral arrangement. The poem's melancholic tone about stunted growth and arrested development contrasts with the image's hopeful, tender mood of fresh blooms in bright sunlight.
+
+================================================================================
+Image 12: 12_flower_wilted.jpeg
+Description: Wilted flowers
+Expected moods: fragile, mournful, passing-time feeling
+================================================================================
+Using original image for Anthropic: 12_flower_wilted.jpeg | raw=310,026 bytes | base64=413,368 bytes
+[56/125] track_1_clip_semantic | poem="Cut Lilies" by Noah Warren | sem=2 emo=2 overall=2
+Rationale: The poem celebrates fresh, vibrant lilies in full bloom with sensory richness and vitality, while the image shows wilted, drooping flowers in decline. The poem's subject matter (abundant cut flowers, their fragrance, their beauty) directly contradicts the image's visual content of deterioration and fading. Though both involve flowers, they represent opposite states and narratives.
+
+Using original image for Anthropic: 12_flower_wilted.jpeg | raw=310,026 bytes | base64=413,368 bytes
+[57/125] track_2_blip_caption | poem="Confession of a Bird Watcher" by Chard DeNiord | sem=2 emo=4 overall=2
+Rationale: While the poem shares the image's window setting and themes of fragility and death, it focuses on birds striking glass rather than wilted flowers. The emotional tone of mournfulness and loss aligns well with the image's melancholic atmosphere, but the semantic disconnect between the poem's bird imagery and the image's floral subject matter is significant. The pairing feels thematically related but conceptually mismatched.
+
+Using original image for Anthropic: 12_flower_wilted.jpeg | raw=310,026 bytes | base64=413,368 bytes
+[58/125] track_3_clip_sbert_mood | poem="In Memoriam A. H. H. OBIIT MDCCCXXXIII: 5" by Alfred, Lord Tennyson | sem=2 emo=4 overall=3
+Rationale: The poem addresses grief and loss through language and emotion rather than depicting wilted flowers or natural decay directly, creating weak semantic alignment with the image's visible content. However, the melancholic, mournful tone and themes of loss and fragility resonate strongly with the image's emotional atmosphere of fading beauty and transience. The pairing feels thematically coherent in mood despite the poem's abstract, introspective focus diverging from the concrete visual subject matter.
+
+Using original image for Anthropic: 12_flower_wilted.jpeg | raw=310,026 bytes | base64=413,368 bytes
+[59/125] track_4_handcrafted_cv | poem="Feedback" by Marcus Slease | sem=1 emo=1 overall=1
+Rationale: The poem is a meta-commentary on a novel or film, discussing narrative techniques, characters, and philosophical concepts with no connection to the image's visible content of wilted flowers in a vase by a window. The poem contains no floral, botanical, domestic, or temporal imagery that would align with the image's subject matter. There is no semantic or emotional resonance between the abstract literary critique and the concrete, melancholic scene of decay and fragility depicted in the photograph.
+
+Using original image for Anthropic: 12_flower_wilted.jpeg | raw=310,026 bytes | base64=413,368 bytes
+[60/125] rerank_retrieve | poem="Marigold" by Mahogany L. Browne | sem=4 emo=5 overall=4
+Rationale: The poem directly addresses wilting flowers and decay, matching the image's visible subject matter of drooping gerberas in a vase. The emotional tone of mournfulness, fragility, and the passage of time aligns perfectly with the image's melancholic atmosphere and the metadata's expected moods. The poem's unflinching treatment of loss and grief resonates strongly with the visual narrative of fading blooms, though the specific flower reference (marigold) differs from the gerberas shown.
+
+================================================================================
+Image 13: 13_abandoned_boats.jpg
+Description: Abandoned boat skeletons
+Expected moods: desolate, industrial, apocalyptic
+================================================================================
+Using original image for Anthropic: 13_abandoned_boats.jpg | raw=259,131 bytes | base64=345,508 bytes
+[61/125] track_1_clip_semantic | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64.data: Image format image/jpeg not supported"},"request_id":"req_011Cba5tnhrMLH6syWwLdnMX"}
+
+Using original image for Anthropic: 13_abandoned_boats.jpg | raw=259,131 bytes | base64=345,508 bytes
+[62/125] track_2_blip_caption | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64.data: Image format image/jpeg not supported"},"request_id":"req_011Cba5upPadUr4aszGw7tjS"}
+
+Using original image for Anthropic: 13_abandoned_boats.jpg | raw=259,131 bytes | base64=345,508 bytes
+[63/125] track_3_clip_sbert_mood | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64.data: Image format image/jpeg not supported"},"request_id":"req_011Cba5vSrKAf8jZR78DA3mU"}
+
+Using original image for Anthropic: 13_abandoned_boats.jpg | raw=259,131 bytes | base64=345,508 bytes
+[64/125] track_4_handcrafted_cv | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64.data: Image format image/jpeg not supported"},"request_id":"req_011Cba5w5cA5uBusmt7XVdwg"}
+
+Using original image for Anthropic: 13_abandoned_boats.jpg | raw=259,131 bytes | base64=345,508 bytes
+[65/125] rerank_retrieve | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64.data: Image format image/jpeg not supported"},"request_id":"req_011Cba5x7igMxyCKfUm4AE1P"}
+
+================================================================================
+Image 14: 14_rusted_pipes.jpg
+Description: Rusted bathroom pipes
+Expected moods: grimy, neglected, uneasy
+================================================================================
+Using original image for Anthropic: 14_rusted_pipes.jpg | raw=2,138,243 bytes | base64=2,850,992 bytes
+[66/125] track_1_clip_semantic | poem="Out of Town" by Piotr Sommer | sem=4 emo=4 overall=4
+Rationale: The poem directly addresses old pipes, dripping water, valves, and septic systems—matching the image's visible plumbing infrastructure. Both convey a sense of neglect, decay, and the passage of time through deteriorating utilities. The poem's atmosphere of abandonment and disrepair aligns well with the grimy, uneasy mood of the rusted pipes, creating a compelling pairing that feels thematically resonant.
+
+Using original image for Anthropic: 14_rusted_pipes.jpg | raw=2,138,243 bytes | base64=2,850,992 bytes
+[67/125] track_2_blip_caption | poem="Out of Town" by Piotr Sommer | sem=4 emo=4 overall=4
+Rationale: The poem directly addresses dripping water, old pipes, valves, and septic systems—all core elements visible in the image of rusted bathroom pipes. The poem's atmosphere of neglect, decay, and abandonment ('no one to tighten the valve,' 'broken switch') matches the grimy, deteriorated aesthetic of the photograph. The pairing creates meaningful resonance between the poem's meditation on aging infrastructure and the visual evidence of time's corrosive effects.
+
+Using original image for Anthropic: 14_rusted_pipes.jpg | raw=2,138,243 bytes | base64=2,850,992 bytes
+[68/125] track_3_clip_sbert_mood | poem="The Illiterate" by William Meredith | sem=1 emo=2 overall=1
+Rationale: The poem is entirely about literacy, letters, and emotional vulnerability with no connection to the image's visible content of rusted pipes, bathroom fixtures, and industrial decay. While the poem does contain melancholic and mysterious elements matching the mood query, it shares no semantic ground with the grimy, neglected physical objects depicted. The pairing feels arbitrary and fails to create meaningful resonance between text and image.
+
+Using original image for Anthropic: 14_rusted_pipes.jpg | raw=2,138,243 bytes | base64=2,850,992 bytes
+[69/125] track_4_handcrafted_cv | poem="To a Deaf and Dumb Little Girl" by Hartley Coleridge | sem=1 emo=2 overall=1
+Rationale: The poem is about a deaf and dumb girl's isolation and inner world, which shares thematic elements of loneliness and solitude with the image's desolate atmosphere. However, the poem contains no reference to physical decay, pipes, bathrooms, neglect, or any concrete objects visible in the image. While both convey melancholy and isolation, the semantic disconnect between a human subject and inanimate rusted infrastructure is too significant for meaningful pairing.
+
+Using original image for Anthropic: 14_rusted_pipes.jpg | raw=2,138,243 bytes | base64=2,850,992 bytes
+[70/125] rerank_retrieve | poem="Out of Town" by Piotr Sommer | sem=4 emo=4 overall=4
+Rationale: The poem directly addresses old pipes, dripping water, valves, and septic systems—matching the image's visible plumbing infrastructure. Both convey neglect and decay through specific details (broken switches, rusted fixtures, water management systems). The poem's atmosphere of abandonment, disrepair, and melancholic acceptance aligns well with the grimy, uneasy mood of the deteriorating bathroom pipes. The pairing feels thematically coherent and emotionally resonant.
+
+================================================================================
+Image 15: 15_mannequin.jpg
+Description: Sticker-covered mannequin
+Expected moods: surreal, uncanny, futuristic
+================================================================================
+Using original image for Anthropic: 15_mannequin.jpg | raw=1,818,314 bytes | base64=2,424,420 bytes
+[71/125] track_1_clip_semantic | poem="mom and dad in a photo" by Edmund Berrigan | sem=1 emo=2 overall=1
+Rationale: The poem contains no visible connection to the image's sticker-covered mannequin, desert setting, or surreal aesthetic. While the poem shares a fragmented, disorienting quality that could theoretically match the image's uncanny mood, the semantic disconnect is too severe—the poem discusses toy cars, musicians, and domestic concerns with no reference to mannequins, stickers, or visual surrealism. The pairing feels arbitrary rather than meaningfully resonant.
+
+Using original image for Anthropic: 15_mannequin.jpg | raw=1,818,314 bytes | base64=2,424,420 bytes
+[72/125] track_2_blip_caption | poem="At the End of My Hours" by Dana Levin | sem=1 emo=2 overall=1
+Rationale: The poem contains only repetitive iterations of 'here' with no connection to the image's visible content—stickers, mannequin, surreal aesthetic, or any concrete imagery. While the repetition might evoke a sense of presence or insistence that could tangentially relate to the uncanny mood, there is no meaningful semantic or thematic alignment between the poem's minimal text and the richly detailed, visually complex image.
+
+Using original image for Anthropic: 15_mannequin.jpg | raw=1,818,314 bytes | base64=2,424,420 bytes
+[73/125] track_3_clip_sbert_mood | poem="What Kind of Mistress He would Have" by Robert Herrick | sem=1 emo=1 overall=1
+Rationale: The poem is a classical love poem about idealized feminine qualities and romantic desire, while the image depicts a surreal, sticker-covered mannequin in a desolate landscape. There is no meaningful connection between the poem's content about a mistress's virtues and the image's uncanny, futuristic aesthetic. The poem's tone is entirely romantic and conventional, directly opposing the image's surreal and unsettling mood.
+
+Using original image for Anthropic: 15_mannequin.jpg | raw=1,818,314 bytes | base64=2,424,420 bytes
+[74/125] track_4_handcrafted_cv | poem="Upon Time and Eternity" by John Bunyan | sem=1 emo=1 overall=1
+Rationale: The poem is a philosophical meditation on time and eternity using abstract metaphors of rings and measures, with no connection to the image's concrete visual elements: a sticker-covered mannequin in a surreal desert setting. While the retrieval query mentions 'otherworldly' and 'mystery,' the poem's classical theological abstraction bears no semantic or thematic relationship to the image's uncanny, futuristic object-focused surrealism. The emotional tones are entirely mismatched—the poem is contemplative and metaphysical, while the image is visually strange and unsettling.
+
+Using original image for Anthropic: 15_mannequin.jpg | raw=1,818,314 bytes | base64=2,424,420 bytes
+[75/125] rerank_retrieve | poem="Greek Architecture" by Herman Melville | sem=1 emo=1 overall=1
+Rationale: The poem discusses classical Greek architecture and reverence for archetypal forms, while the image depicts a surreal, sticker-covered mannequin in a desolate landscape—completely unrelated subject matter. There is no semantic connection between Melville's architectural meditation and this contemporary, uncanny art object. The poem's classical, reverent tone directly contradicts the image's surreal, chaotic, and futuristic aesthetic.
+
+================================================================================
+Image 16: 16_clustered_kitchen.jpg
+Description: Cluttered kitchen sink
+Expected moods: messy, mundane, slightly tense
+================================================================================
+Using original image for Anthropic: 16_clustered_kitchen.jpg | raw=2,914,276 bytes | base64=3,885,704 bytes
+[76/125] track_1_clip_semantic | poem="Brushing Teeth with My Sister after the Wake" by Jim Daniels | sem=4 emo=3 overall=3
+Rationale: The poem directly references a kitchen sink, matching the image's primary subject and setting. However, the poem's narrative focuses on an intimate family moment after a wake, while the image shows a cluttered, messy kitchen with no people visible. The emotional tone of the poem—bittersweet, reflective, and connected—contrasts with the image's mundane, slightly tense messiness, creating a meaningful but somewhat misaligned pairing.
+
+Using original image for Anthropic: 16_clustered_kitchen.jpg | raw=2,914,276 bytes | base64=3,885,704 bytes
+[77/125] track_2_blip_caption | poem="Brushing Teeth with My Sister after the Wake" by Jim Daniels | sem=4 emo=4 overall=4
+Rationale: The poem directly references a kitchen sink and captures the cluttered, lived-in domestic space visible in the image. The emotional tone of quiet melancholy mixed with unexpected moments of connection aligns well with the image's slightly tense, mundane atmosphere. The poem transforms the ordinary kitchen setting into a meaningful space of human connection, creating resonance between the visual clutter and emotional complexity.
+
+Using original image for Anthropic: 16_clustered_kitchen.jpg | raw=2,914,276 bytes | base64=3,885,704 bytes
+[78/125] track_3_clip_sbert_mood | poem="Gloss of the Past" by David Trinidad | sem=1 emo=2 overall=1
+Rationale: The poem is entirely about variations of the color pink and contains no reference to kitchens, clutter, dishes, sinks, or any visible objects in the image. While the poem's repetitive, overwhelming structure might abstractly echo chaos, there is no semantic connection to the image's content. The emotional tone of playful nostalgia in the poem does not align with the mundane, slightly tense mood of a cluttered kitchen.
+
+Using original image for Anthropic: 16_clustered_kitchen.jpg | raw=2,914,276 bytes | base64=3,885,704 bytes
+[79/125] track_4_handcrafted_cv | poem="There's a certain Slant of light, (320)" by Emily Dickinson | sem=1 emo=2 overall=1
+Rationale: The poem is about winter light, cathedral atmosphere, and metaphysical despair—none of which appear in this cluttered kitchen sink image. While both share a somewhat somber tone, the poem's abstract, transcendent themes about light and spiritual affliction have no semantic connection to the concrete domestic clutter visible here. The pairing feels arbitrary rather than meaningfully resonant.
+
+Using original image for Anthropic: 16_clustered_kitchen.jpg | raw=2,914,276 bytes | base64=3,885,704 bytes
+[80/125] rerank_retrieve | poem="Brushing Teeth with My Sister after the Wake" by Jim Daniels | sem=4 emo=4 overall=4
+Rationale: The poem directly references a kitchen sink, matching the image's primary subject and setting. Both capture a moment of domestic intimacy amid clutter and life's complications—the poem's post-wake family gathering parallels the image's cluttered, lived-in atmosphere. The emotional tone of bittersweet mundanity, underlying tension, and finding moments of connection amid chaos aligns well with the image's messy, slightly tense mood.
+
+================================================================================
+Image 17: 17_abandoned_classroom.jpg
+Description: Abandoned classroom
+Expected moods: decayed, forgotten, melancholic
+================================================================================
+Using original image for Anthropic: 17_abandoned_classroom.jpg | raw=3,416,747 bytes | base64=4,555,664 bytes
+[81/125] track_1_clip_semantic | poem="Here" by Samuel Menashe | sem=3 emo=4 overall=3
+Rationale: The poem's reference to an 'old flat' and abandoned space aligns with the image's decayed classroom setting, though the specific domestic context differs from the institutional space shown. The emotional tone of haunting, abandonment, and melancholy ('Ghost,' 'aftermath') matches the image's atmosphere of decay and desolation very well. However, the pairing feels somewhat generic—the poem could apply to many abandoned spaces, and doesn't capture the specific educational or institutional quality of the classroom.
+
+Using original image for Anthropic: 17_abandoned_classroom.jpg | raw=3,416,747 bytes | base64=4,555,664 bytes
+[82/125] track_2_blip_caption | poem="Two Rooms" by Emily Berry | sem=3 emo=2 overall=2
+Rationale: The poem's reference to rooms and the act of moving between spaces matches the image's setting of an abandoned classroom, but lacks engagement with the specific visual details (scattered papers, deteriorated furniture, overgrown window). While the image conveys decay and abandonment, the poem's tone of safety and containment contrasts sharply with the melancholic, forgotten atmosphere the image projects, creating a disconnect in emotional resonance.
+
+Using original image for Anthropic: 17_abandoned_classroom.jpg | raw=3,416,747 bytes | base64=4,555,664 bytes
+[83/125] track_3_clip_sbert_mood | poem="The Illiterate" by William Meredith | sem=1 emo=2 overall=1
+Rationale: The poem is about illiteracy, a letter, and emotional uncertainty—none of which relate to the image's visible content of an abandoned classroom with decay, debris, and deteriorating infrastructure. While both share melancholic and uncertain emotional tones, the semantic disconnect is too severe. The poem's intimate, personal narrative about a man and a letter has no meaningful connection to the desolate, physically abandoned space depicted.
+
+Using original image for Anthropic: 17_abandoned_classroom.jpg | raw=3,416,747 bytes | base64=4,555,664 bytes
+[84/125] track_4_handcrafted_cv | poem="There's a certain Slant of light, (320)" by Emily Dickinson | sem=2 emo=4 overall=3
+Rationale: The poem's focus on light, winter afternoons, and cathedral-like oppression has limited direct semantic connection to the abandoned classroom's visible objects (chairs, desks, debris). However, the emotional atmosphere—despair, internal desolation, shadows, and a sense of abandonment—aligns strongly with the image's melancholic and decayed mood. The pairing achieves moderate resonance through shared emotional territory despite weak literal correspondence.
+
+Using original image for Anthropic: 17_abandoned_classroom.jpg | raw=3,416,747 bytes | base64=4,555,664 bytes
+[85/125] rerank_retrieve | poem="Here" by Samuel Menashe | sem=3 emo=4 overall=3
+Rationale: The poem's reference to an 'old flat' and abandoned space aligns with the image's decayed interior setting, though it lacks specific visual details present in the classroom (chairs, desks, debris). The emotional tone of haunting, abandonment, and melancholy strongly matches the image's atmosphere of decay and desolation. While the pairing captures the mood effectively, the poem's abstract, intimate voice feels somewhat disconnected from the concrete, institutional nature of the abandoned classroom.
+
+================================================================================
+Image 18: 18_starry_night.jpg
+Description: Starry night
+Expected moods: vast, sublime, quiet
+================================================================================
+Compressed image for Anthropic: 18_starry_night.jpg | original_raw=5,181,194 bytes | original_base64=6,908,260 bytes | sent_raw=2,997,276 bytes | sent_base64=3,996,368 bytes | quality=75 | long_edge=7876
+[86/125] track_1_clip_semantic | poem="Future Memories" by Mario Meléndez | sem=4 emo=4 overall=4
+Rationale: The poem directly addresses the image's core visual content—a starry night sky reflected in water, creating the illusion of stars filling the ocean. The poem captures the sense of wonder and revelation at witnessing this celestial-aquatic phenomenon. The emotional tone of delighted discovery and sublime awe aligns perfectly with the image's vast, quiet, and transcendent mood. The pairing feels naturally resonant, with the poem articulating the magical experience the photograph evokes.
+
+Compressed image for Anthropic: 18_starry_night.jpg | original_raw=5,181,194 bytes | original_base64=6,908,260 bytes | sent_raw=2,997,276 bytes | sent_base64=3,996,368 bytes | quality=75 | long_edge=7876
+[87/125] track_2_blip_caption | poem="Niagara" by Adelaide Crapsey | sem=2 emo=3 overall=2
+Rationale: The poem focuses on a moon over Niagara Falls, while the image depicts the Milky Way galaxy over a calm beach or water body—fundamentally different celestial and terrestrial subjects. However, both share nocturnal water settings and contemplative moods. The emotional tone of fragility and vastness partially aligns, but the semantic mismatch between a specific moon-and-waterfall scene and a starry night seascape limits overall resonance.
+
+Compressed image for Anthropic: 18_starry_night.jpg | original_raw=5,181,194 bytes | original_base64=6,908,260 bytes | sent_raw=2,997,276 bytes | sent_base64=3,996,368 bytes | quality=75 | long_edge=7876
+[88/125] track_3_clip_sbert_mood | poem="In Memoriam A. H. H. OBIIT MDCCCXXXIII: 126" by Alfred, Lord Tennyson | sem=2 emo=3 overall=2
+Rationale: The poem is primarily about love, loss, and spiritual devotion with no direct reference to the image's visible content—starry night, beach, water, or celestial landscape. While the poem contains some thematic overlap with the image's vastness and quiet contemplation (mentions of 'worlds of space' and 'deep night'), the semantic connection is tenuous. The emotional tone of grief and longing in the poem partially aligns with the sublime melancholy of the image, but the pairing feels more coincidental than meaningfully resonant.
+
+Compressed image for Anthropic: 18_starry_night.jpg | original_raw=5,181,194 bytes | original_base64=6,908,260 bytes | sent_raw=2,997,276 bytes | sent_base64=3,996,368 bytes | quality=75 | long_edge=7876
+[89/125] track_4_handcrafted_cv | poem="The Illiterate" by William Meredith | sem=1 emo=2 overall=1
+Rationale: The poem is about illiteracy, uncertainty, and emotional ambivalence regarding a mysterious letter—it contains no imagery, references, or content related to the starry night landscape, beach, or celestial scene visible in the image. While the poem does explore themes of mystery and uncertainty that loosely align with the retrieval model's emotional descriptors, there is virtually no semantic connection between the poem's domestic, interpersonal narrative and the image's vast, sublime natural landscape.
+
+Compressed image for Anthropic: 18_starry_night.jpg | original_raw=5,181,194 bytes | original_base64=6,908,260 bytes | sent_raw=2,997,276 bytes | sent_base64=3,996,368 bytes | quality=75 | long_edge=7876
+[90/125] rerank_retrieve | poem="On the Beach at Night Alone" by Walt Whitman | sem=5 emo=5 overall=5
+Rationale: The poem directly addresses a solitary figure on a beach at night watching stars, which perfectly matches the image's literal content and setting. Whitman's meditation on vastness, cosmic interconnection, and the sublime aligns precisely with the image's mood of awe and contemplation before an expansive starry sky. The poem's themes of vastness and quiet wonder resonate deeply with the image's visual and emotional impact, creating an exceptionally compelling pairing.
+
+================================================================================
+Image 19: 19_alley_companions.jpg
+Description: Alley companions
+Expected moods: intimate, secretive, urban, cinematic
+================================================================================
+Using original image for Anthropic: 19_alley_companions.jpg | raw=1,233,357 bytes | base64=1,644,476 bytes
+[91/125] track_1_clip_semantic | poem="Minding Rites" by David Yezzi | sem=2 emo=3 overall=2
+Rationale: The poem focuses on a domestic relationship narrative involving flowers and ritual, while the image depicts two men in business attire walking through an urban alley at night. There is minimal semantic overlap in visible content or setting. The poem's reflective, intimate tone about marriage and devotion partially aligns with the image's secretive, intimate atmosphere, but the specific subject matter (a couple's relationship) does not match the image's apparent depiction of two professional figures in an urban environment.
+
+Using original image for Anthropic: 19_alley_companions.jpg | raw=1,233,357 bytes | base64=1,644,476 bytes
+[92/125] track_2_blip_caption | poem="Peace Walk" by William E. Stafford | sem=2 emo=3 overall=2
+Rationale: While the poem depicts two men walking in an urban setting at night, it specifically describes a peace march protest with signs and political messaging, whereas the image shows two businessmen in suits walking through a quiet alley with no visible protest context. The emotional atmosphere of introspection and quiet urban movement aligns somewhat with the image's cinematic, intimate mood, but the poem's explicit political activism content diverges significantly from what is visually present.
+
+Using original image for Anthropic: 19_alley_companions.jpg | raw=1,233,357 bytes | base64=1,644,476 bytes
+[93/125] track_3_clip_sbert_mood | poem="Inventing a Horse" by Meghan O'Rourke | sem=1 emo=2 overall=1
+Rationale: The poem is entirely about inventing and caring for a horse, with no connection to the image's urban alley setting, two men in business attire, bicycles, or Asian storefronts. While the poem explores themes of care, devotion, and imagination that loosely align with the retrieval query's emotional themes, there is virtually no semantic overlap with the visible content of the photograph. The pairing feels arbitrary and unconvincing.
+
+Using original image for Anthropic: 19_alley_companions.jpg | raw=1,233,357 bytes | base64=1,644,476 bytes
+[94/125] track_4_handcrafted_cv | poem="From “The Invention of Influence”" by Peter Cole | sem=2 emo=3 overall=2
+Rationale: The poem discusses memory, influence, and cryptomnesia through Freud's philosophical lens, which has minimal connection to the image's visible content of two figures walking through an urban alley at night. While the poem's themes of hidden channels and uncertainty could abstractly relate to the image's mysterious atmosphere, there is no semantic overlap with the concrete scene depicted. The emotional tone of intellectual contemplation in the poem partially aligns with the image's cinematic, secretive mood, but the pairing feels more coincidental than meaningfully resonant.
+
+Using original image for Anthropic: 19_alley_companions.jpg | raw=1,233,357 bytes | base64=1,644,476 bytes
+[95/125] rerank_retrieve | poem="Minding Rites" by David Yezzi | sem=2 emo=3 overall=2
+Rationale: The poem focuses on domestic rituals, marriage, and flowers—none of which are visibly present in this urban alley scene with two men in business attire. While both image and poem explore human connection and relationships, the semantic content diverges significantly. The emotional tone of melancholy and regret in the poem somewhat aligns with the cinematic, secretive mood of the image, but the pairing feels thematically disconnected rather than meaningfully resonant.
+
+================================================================================
+Image 20: 20_hidden_waterfall.jpg
+Description: Hidden forest waterfall
+Expected moods: serene, secluded, majestic, contemplative
+================================================================================
+Compressed image for Anthropic: 20_hidden_waterfall.jpg | original_raw=5,433,981 bytes | original_base64=7,245,308 bytes | sent_raw=3,396,946 bytes | sent_base64=4,529,264 bytes | quality=75 | long_edge=6000
+[96/125] track_1_clip_semantic | poem="Untitled" by James Baldwin | sem=4 emo=5 overall=4
+Rationale: The poem directly addresses falling water and light, matching the image's central waterfall subject matter. The emotional tone of contemplation, vulnerability, and being overwhelmed by natural forces aligns perfectly with the serene yet majestic mood of the hidden waterfall. The pairing creates meaningful resonance through the poem's meditation on being beneath cascading water and blinded by its light, which poetically captures the awe and intensity of witnessing such a natural phenomenon.
+
+Compressed image for Anthropic: 20_hidden_waterfall.jpg | original_raw=5,433,981 bytes | original_base64=7,245,308 bytes | sent_raw=3,396,946 bytes | sent_base64=4,529,264 bytes | quality=75 | long_edge=6000
+[97/125] track_2_blip_caption | poem="Hawk" by Wendy Videlock | sem=2 emo=3 overall=2
+Rationale: The poem mentions 'forest' and 'deep in the forest' which connects to the setting, but it focuses on a hawk with a busted wing rather than the waterfall that dominates the image. The poem's content (a wounded bird) doesn't match the visible subject matter of a tall, majestic waterfall. While the poem captures some of the forest's serene and secluded mood, the thematic mismatch between the poem's narrative and the image's primary subject significantly weakens the pairing.
+
+Compressed image for Anthropic: 20_hidden_waterfall.jpg | original_raw=5,433,981 bytes | original_base64=7,245,308 bytes | sent_raw=3,396,946 bytes | sent_base64=4,529,264 bytes | quality=75 | long_edge=6000
+[98/125] track_3_clip_sbert_mood | poem="In Memoriam A. H. H. OBIIT MDCCCXXXIII: 126" by Alfred, Lord Tennyson | sem=1 emo=2 overall=1
+Rationale: The poem is entirely about love, loss, and spiritual devotion with no reference to nature, waterfalls, forests, or any visible elements in the image. While the poem contains some contemplative and peaceful qualities that loosely align with the expected mood, the semantic disconnect is complete—the image shows a hidden waterfall in a lush forest, while the poem discusses abstract emotional and spiritual themes with no natural imagery.
+
+Compressed image for Anthropic: 20_hidden_waterfall.jpg | original_raw=5,433,981 bytes | original_base64=7,245,308 bytes | sent_raw=3,396,946 bytes | sent_base64=4,529,264 bytes | quality=75 | long_edge=6000
+[99/125] track_4_handcrafted_cv | poem="From “The Invention of Influence”" by Peter Cole | sem=1 emo=1 overall=1
+Rationale: The poem is a philosophical meditation on Freud's concept of cryptomnesia and the nature of memory and influence—it contains no imagery, references, or thematic connection to waterfalls, forests, nature, or landscape. While the retrieval model's query emphasized mystery and the surreal, the poem's abstract intellectual content about memory and authorship bears no semantic relationship to the visible waterfall scene. The emotional tones are entirely misaligned: the image conveys serenity and natural majesty while the poem offers cerebral abstraction.
+
+Compressed image for Anthropic: 20_hidden_waterfall.jpg | original_raw=5,433,981 bytes | original_base64=7,245,308 bytes | sent_raw=3,396,946 bytes | sent_base64=4,529,264 bytes | quality=75 | long_edge=6000
+[100/125] rerank_retrieve | poem="Genealogy" by Jennifer Chang | sem=4 emo=4 overall=4
+Rationale: The poem directly engages with water, forest, and the hidden, intimate spaces visible in the image—streams, roots, moss, and the forest floor. Its contemplative tone of stillness and introspection aligns well with the serene, secluded mood of the waterfall nestled deep within dense vegetation. The imagery of trickling water, forest depths, and primordial solitude creates strong semantic and emotional resonance with the photograph's majestic yet intimate landscape.
+
+================================================================================
+Image 21: 21_toys.jpg
+Description: Cluttered toy
+Expected moods: playful, nostalgic, surreal
+================================================================================
+Using original image for Anthropic: 21_toys.jpg | raw=2,055,221 bytes | base64=2,740,296 bytes
+[101/125] track_1_clip_semantic | poem="Advent" by Rae Armantrout | sem=2 emo=2 overall=2
+Rationale: The poem describes a nativity scene made of balloons, while the image shows a cluttered collection of vintage toys and figurines with no nativity theme. Though both involve figurative representations and nostalgic objects, the specific subject matter diverges significantly. The poem's spiritual, holiday-focused tone contrasts with the image's playful, surreal toy collection aesthetic, creating minimal emotional or thematic alignment.
+
+Using original image for Anthropic: 21_toys.jpg | raw=2,055,221 bytes | base64=2,740,296 bytes
+[102/125] track_2_blip_caption | poem="At the End of My Hours" by Dana Levin | sem=1 emo=1 overall=1
+Rationale: The poem consists only of repetitive iterations of 'here' with no semantic connection to the image's visible content of toys, figurines, characters, or collectibles. There is no thematic, narrative, or conceptual relationship between the minimalist text and the cluttered, nostalgic toy display. The poem's mood of anxious repetition does not align with the playful, surreal, or nostalgic atmosphere suggested by the image.
+
+Using original image for Anthropic: 21_toys.jpg | raw=2,055,221 bytes | base64=2,740,296 bytes
+[103/125] track_3_clip_sbert_mood | poem="Gloss of the Past" by David Trinidad | sem=1 emo=2 overall=1
+Rationale: The poem is entirely about variations of the color pink and contains no reference to toys, childhood objects, nostalgia, or any visible content from the image. While the poem's playful, repetitive tone might tangentially match the expected playful mood, it fails to engage with the image's actual subject matter—collectible figurines, vintage toys, and memorabilia. The semantic disconnect is nearly complete.
+
+Using original image for Anthropic: 21_toys.jpg | raw=2,055,221 bytes | base64=2,740,296 bytes
+[104/125] track_4_handcrafted_cv | poem="Upon Time and Eternity" by John Bunyan | sem=1 emo=1 overall=1
+Rationale: The poem is a philosophical meditation on time and eternity using abstract metaphors of rings and measures, with no connection to the image's concrete subject matter of vintage toys, collectibles, and nostalgic objects. The poem's abstract, metaphysical content bears no relationship to the playful, surreal, and nostalgic mood created by the cluttered toy display. There is no meaningful alignment between the poem's themes and the image's visual or emotional content.
+
+Using original image for Anthropic: 21_toys.jpg | raw=2,055,221 bytes | base64=2,740,296 bytes
+[105/125] rerank_retrieve | poem="Advent" by Rae Armantrout | sem=2 emo=2 overall=2
+Rationale: The poem describes a nativity scene made of balloons, while the image shows a cluttered collection of vintage toys and figurines with no nativity theme. Though both involve figurative representations and childhood/nostalgic elements, the specific subject matter diverges significantly. The poem's serene, contemplative tone about a religious scene contrasts with the image's playful, surreal abundance of diverse toy characters.
+
+================================================================================
+Image 22: 22_artificial_forest.jpg
+Description: Artificial forest construction
+Expected moods: surreal, disorienting, ironic
+================================================================================
+Using original image for Anthropic: 22_artificial_forest.jpg | raw=271,229 bytes | base64=361,640 bytes
+[106/125] track_1_clip_semantic | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64.data: Image format image/jpeg not supported"},"request_id":"req_011Cba6LQTsFYpaBoBMvCpfv"}
+
+Using original image for Anthropic: 22_artificial_forest.jpg | raw=271,229 bytes | base64=361,640 bytes
+[107/125] track_2_blip_caption | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64.data: Image format image/jpeg not supported"},"request_id":"req_011Cba6MNULSCTxKLTHi7Hzr"}
+
+Using original image for Anthropic: 22_artificial_forest.jpg | raw=271,229 bytes | base64=361,640 bytes
+[108/125] track_3_clip_sbert_mood | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64.data: Image format image/jpeg not supported"},"request_id":"req_011Cba6Mx8PityPDNt51Ti6H"}
+
+Using original image for Anthropic: 22_artificial_forest.jpg | raw=271,229 bytes | base64=361,640 bytes
+[109/125] track_4_handcrafted_cv | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64.data: Image format image/jpeg not supported"},"request_id":"req_011Cba6NiRfNrTWBfTr5nXAZ"}
+
+Using original image for Anthropic: 22_artificial_forest.jpg | raw=271,229 bytes | base64=361,640 bytes
+[110/125] rerank_retrieve | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64.data: Image format image/jpeg not supported"},"request_id":"req_011Cba6Pko54ha57Es2VPRfe"}
+
+================================================================================
+Image 23: 23_fisherman.jpg
+Description: Fisherman by city harbor
+Expected moods: watchful, industrial, contemplative, solitary
+================================================================================
+Using original image for Anthropic: 23_fisherman.jpg | raw=165,172 bytes | base64=220,232 bytes
+[111/125] track_1_clip_semantic | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64.data: Image format image/jpeg not supported"},"request_id":"req_011Cba6QLFin3Mu29SMDoVcf"}
+
+Using original image for Anthropic: 23_fisherman.jpg | raw=165,172 bytes | base64=220,232 bytes
+[112/125] track_2_blip_caption | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64.data: Image format image/jpeg not supported"},"request_id":"req_011Cba6RK9GwX4Krdhf1f79e"}
+
+Using original image for Anthropic: 23_fisherman.jpg | raw=165,172 bytes | base64=220,232 bytes
+[113/125] track_3_clip_sbert_mood | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64.data: Image format image/jpeg not supported"},"request_id":"req_011Cba6Rvsr4pjGnRLMvDch6"}
+
+Using original image for Anthropic: 23_fisherman.jpg | raw=165,172 bytes | base64=220,232 bytes
+[114/125] track_4_handcrafted_cv | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64.data: Image format image/jpeg not supported"},"request_id":"req_011Cba6Sa1khvUYQ5ZDPT6i6"}
+
+Using original image for Anthropic: 23_fisherman.jpg | raw=165,172 bytes | base64=220,232 bytes
+[115/125] rerank_retrieve | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64.data: Image format image/jpeg not supported"},"request_id":"req_011Cba6Tcuuo6eF58KVFu6A9"}
+
+================================================================================
+Image 24: 24_running_crowd.jpg
+Description: Running crowd
+Expected moods: chaotic, urgent, overwhelming
+================================================================================
+Using original image for Anthropic: 24_running_crowd.jpg | raw=922,206 bytes | base64=1,229,608 bytes
+[116/125] track_1_clip_semantic | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64.data: Image format image/jpeg not supported"},"request_id":"req_011Cba6UDntm6UTSftDKAWPf"}
+
+Using original image for Anthropic: 24_running_crowd.jpg | raw=922,206 bytes | base64=1,229,608 bytes
+[117/125] track_2_blip_caption | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64.data: Image format image/jpeg not supported"},"request_id":"req_011Cba6VE6H3qWQsVuxVFYBK"}
+
+Using original image for Anthropic: 24_running_crowd.jpg | raw=922,206 bytes | base64=1,229,608 bytes
+[118/125] track_3_clip_sbert_mood | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64.data: Image format image/jpeg not supported"},"request_id":"req_011Cba6VqaxnFU3W495oZRhC"}
+
+Using original image for Anthropic: 24_running_crowd.jpg | raw=922,206 bytes | base64=1,229,608 bytes
+[119/125] track_4_handcrafted_cv | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64.data: Image format image/jpeg not supported"},"request_id":"req_011Cba6WUL4dg8oveKYkzhwS"}
+
+Using original image for Anthropic: 24_running_crowd.jpg | raw=922,206 bytes | base64=1,229,608 bytes
+[120/125] rerank_retrieve | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64.data: Image format image/jpeg not supported"},"request_id":"req_011Cba6XaZPM8FGE8g4R9rBY"}
+
+================================================================================
+Image 25: 25_crouching_child.jpg
+Description: Crouching child
+Expected moods: tense, vulnerable, political
+================================================================================
+Using original image for Anthropic: 25_crouching_child.jpg | raw=391,789 bytes | base64=522,388 bytes
+[121/125] track_1_clip_semantic | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64.data: Image format image/jpeg not supported"},"request_id":"req_011Cba6YC6ZMTT3qg23fTis6"}
+
+Using original image for Anthropic: 25_crouching_child.jpg | raw=391,789 bytes | base64=522,388 bytes
+[122/125] track_2_blip_caption | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64.data: Image format image/jpeg not supported"},"request_id":"req_011Cba6ZE7P93K5CzN4m1bCk"}
+
+Using original image for Anthropic: 25_crouching_child.jpg | raw=391,789 bytes | base64=522,388 bytes
+[123/125] track_3_clip_sbert_mood | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64.data: Image format image/jpeg not supported"},"request_id":"req_011Cba6ZqLhPPgTnHTeFFUSf"}
+
+Using original image for Anthropic: 25_crouching_child.jpg | raw=391,789 bytes | base64=522,388 bytes
+[124/125] track_4_handcrafted_cv | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64.data: Image format image/jpeg not supported"},"request_id":"req_011Cba6aYe8PrDzjXC9YHJSX"}
+
+Using original image for Anthropic: 25_crouching_child.jpg | raw=391,789 bytes | base64=522,388 bytes
+[125/125] rerank_retrieve | ERROR: Anthropic HTTP error 400: {"type":"error","error":{"type":"invalid_request_error","message":"messages.0.content.0.image.source.base64.data: Image format image/jpeg not supported"},"request_id":"req_011Cba6bfrzQrAkNdqmPqJMA"}
+
+================================================================================
+Final Summary
+================================================================================
+             model_name  n_pairs  semantic_fit_mean  emotional_fit_mean  overall_resonance_mean  semantic_fit_std  emotional_fit_std  overall_resonance_std
+        rerank_retrieve       19              3.316               3.632                   3.316             1.057              1.165                  1.057
+  track_1_clip_semantic       19              2.684               2.895                   2.526             1.157              1.100                  1.020
+   track_2_blip_caption       19              2.526               2.789                   2.368             1.073              1.084                  1.116
+track_3_clip_sbert_mood       19              1.474               2.632                   1.684             0.513              0.895                  0.820
+ track_4_handcrafted_cv       19              1.368               2.000                   1.474             0.496              1.000                  0.697
+
+Summary CSV:  /Users/connorhuangmarsh/Desktop/CS131_Final_Proj/llm_judge_results/model_summary.csv
+Summary JSON: /Users/connorhuangmarsh/Desktop/CS131_Final_Proj/llm_judge_results/model_summary.json
+Summary TXT:  /Users/connorhuangmarsh/Desktop/CS131_Final_Proj/llm_judge_results/model_summary.txt
+
+Done.

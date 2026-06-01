@@ -1,0 +1,51 @@
+Image 2 Single-Eval Test Log
+================================================================================
+
+Running one-image, one-model Anthropic eval test.
+Image: 2_beach_empty.jpg
+Model: track_1_clip_semantic
+
+Retrieved poem: "History Lesson" by Natasha Trethewey
+Retrieval score: 0.2814345955848694
+
+Original image: /Users/connorhuangmarsh/Desktop/CS131_Final_Proj/test_images/2_beach_empty.jpg
+Original raw bytes:    5,044,121
+Original base64 bytes: 6,725,496
+Anthropic base64 cap:  5,242,880
+Target base64 bytes:   5,092,880
+
+Try long_edge=5000, quality=95: raw=6,481,569, base64=8,642,092
+Try long_edge=5000, quality=90: raw=5,468,652, base64=7,291,536
+Try long_edge=5000, quality=85: raw=4,822,076, base64=6,429,436
+Try long_edge=5000, quality=80: raw=4,398,040, base64=5,864,056
+Try long_edge=5000, quality=75: raw=3,115,860, base64=4,154,480
+
+Selected compressed image:
+Sent raw bytes:    3,115,860
+Sent base64 bytes: 4,154,480
+Quality:           75
+Long edge:         5000
+
+Judge result:
+{
+  "image_id": 2,
+  "filename": "2_beach_empty.jpg",
+  "image_description": "Empty beach at dusk",
+  "expected_moods": [
+    "lonely",
+    "reflective",
+    "melancholic"
+  ],
+  "model_name": "track_1_clip_semantic",
+  "poem_id": 5159,
+  "poem_title": "History Lesson",
+  "poem_author": "Natasha Trethewey",
+  "retrieval_score": 0.2814345955848694,
+  "semantic_fit": 4,
+  "emotional_fit": 3,
+  "overall_resonance": 3,
+  "rationale": "The poem directly addresses a beach scene with vivid sensory details that match the image's coastal setting and empty, contemplative atmosphere. However, the poem's primary focus is on personal memory, racial history, and human presence (the speaker and grandmother), while the image emphasizes solitude and emptiness with no people visible. The emotional tones diverge\u2014the poem carries historical weight and familial connection, whereas the image conveys isolation and melancholy."
+}
+
+Wrote result JSON to: /Users/connorhuangmarsh/Desktop/CS131_Final_Proj/test_image2_eval_result.json
+Done.

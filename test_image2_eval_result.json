@@ -1,0 +1,19 @@
+{
+  "image_id": 2,
+  "filename": "2_beach_empty.jpg",
+  "image_description": "Empty beach at dusk",
+  "expected_moods": [
+    "lonely",
+    "reflective",
+    "melancholic"
+  ],
+  "model_name": "track_1_clip_semantic",
+  "poem_id": 5159,
+  "poem_title": "History Lesson",
+  "poem_author": "Natasha Trethewey",
+  "retrieval_score": 0.2814345955848694,
+  "semantic_fit": 4,
+  "emotional_fit": 3,
+  "overall_resonance": 3,
+  "rationale": "The poem directly addresses a beach scene with vivid sensory details that match the image's coastal setting and empty, contemplative atmosphere. However, the poem's primary focus is on personal memory, racial history, and human presence (the speaker and grandmother), while the image emphasizes solitude and emptiness with no people visible. The emotional tones diverge\u2014the poem carries historical weight and familial connection, whereas the image conveys isolation and melancholy."
+}

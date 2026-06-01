@@ -1,0 +1,52 @@
+[
+  {
+    "model_name": "rerank_retrieve",
+    "n_pairs": 19,
+    "semantic_fit_mean": 3.316,
+    "emotional_fit_mean": 3.632,
+    "overall_resonance_mean": 3.316,
+    "semantic_fit_std": 1.057,
+    "emotional_fit_std": 1.165,
+    "overall_resonance_std": 1.057
+  },
+  {
+    "model_name": "track_1_clip_semantic",
+    "n_pairs": 19,
+    "semantic_fit_mean": 2.684,
+    "emotional_fit_mean": 2.895,
+    "overall_resonance_mean": 2.526,
+    "semantic_fit_std": 1.157,
+    "emotional_fit_std": 1.1,
+    "overall_resonance_std": 1.02
+  },
+  {
+    "model_name": "track_2_blip_caption",
+    "n_pairs": 19,
+    "semantic_fit_mean": 2.526,
+    "emotional_fit_mean": 2.789,
+    "overall_resonance_mean": 2.368,
+    "semantic_fit_std": 1.073,
+    "emotional_fit_std": 1.084,
+    "overall_resonance_std": 1.116
+  },
+  {
+    "model_name": "track_3_clip_sbert_mood",
+    "n_pairs": 19,
+    "semantic_fit_mean": 1.474,
+    "emotional_fit_mean": 2.632,
+    "overall_resonance_mean": 1.684,
+    "semantic_fit_std": 0.513,
+    "emotional_fit_std": 0.895,
+    "overall_resonance_std": 0.82
+  },
+  {
+    "model_name": "track_4_handcrafted_cv",
+    "n_pairs": 19,
+    "semantic_fit_mean": 1.368,
+    "emotional_fit_mean": 2.0,
+    "overall_resonance_mean": 1.474,
+    "semantic_fit_std": 0.496,
+    "emotional_fit_std": 1.0,
+    "overall_resonance_std": 0.697
+  }
+]
