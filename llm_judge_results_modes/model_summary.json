@@ -1,0 +1,52 @@
+[
+  {
+    "model_name": "rerank_retrieve",
+    "n_pairs": 19,
+    "semantic_fit_mean": 3.158,
+    "emotional_fit_mean": 3.526,
+    "overall_resonance_mean": 3.263,
+    "semantic_fit_std": 1.214,
+    "emotional_fit_std": 1.349,
+    "overall_resonance_std": 1.284
+  },
+  {
+    "model_name": "mode_balanced",
+    "n_pairs": 19,
+    "semantic_fit_mean": 2.947,
+    "emotional_fit_mean": 3.158,
+    "overall_resonance_mean": 2.842,
+    "semantic_fit_std": 1.224,
+    "emotional_fit_std": 1.344,
+    "overall_resonance_std": 1.119
+  },
+  {
+    "model_name": "mode_content",
+    "n_pairs": 19,
+    "semantic_fit_mean": 2.842,
+    "emotional_fit_mean": 2.947,
+    "overall_resonance_mean": 2.684,
+    "semantic_fit_std": 1.167,
+    "emotional_fit_std": 1.393,
+    "overall_resonance_std": 1.204
+  },
+  {
+    "model_name": "mode_creative",
+    "n_pairs": 19,
+    "semantic_fit_mean": 1.579,
+    "emotional_fit_mean": 2.579,
+    "overall_resonance_mean": 1.789,
+    "semantic_fit_std": 0.838,
+    "emotional_fit_std": 1.071,
+    "overall_resonance_std": 1.032
+  },
+  {
+    "model_name": "mode_mood",
+    "n_pairs": 19,
+    "semantic_fit_mean": 1.316,
+    "emotional_fit_mean": 2.526,
+    "overall_resonance_mean": 1.632,
+    "semantic_fit_std": 0.582,
+    "emotional_fit_std": 0.964,
+    "overall_resonance_std": 1.012
+  }
+]

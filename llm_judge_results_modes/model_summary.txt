@@ -1,0 +1,6 @@
+     model_name  n_pairs  semantic_fit_mean  emotional_fit_mean  overall_resonance_mean  semantic_fit_std  emotional_fit_std  overall_resonance_std
+rerank_retrieve       19              3.158               3.526                   3.263             1.214              1.349                  1.284
+  mode_balanced       19              2.947               3.158                   2.842             1.224              1.344                  1.119
+   mode_content       19              2.842               2.947                   2.684             1.167              1.393                  1.204
+  mode_creative       19              1.579               2.579                   1.789             0.838              1.071                  1.032
+      mode_mood       19              1.316               2.526                   1.632             0.582              0.964                  1.012
